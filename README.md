@@ -2,8 +2,7 @@
 
 This is the unofficial repository of LPROF. We just reposted to help some people who still need this tool but major development has been stopped (?) Or hasn't been updated yet. We brought in the AppImage format to distribute this tool. Please note, Devlovers does not make any warranty for using this tool. Please use at your own risk.
 
-To download the AppImage, please go to Release.
-Thanks.
+To download the AppImage, please go to Release. Thanks!
 
 
 
