@@ -1,0 +1,10 @@
+# This file tells the build system what translations to update and compile. To
+# add a new translation, simply add it here. When you run
+# "scons" the translation files will be updated and new ones
+# generated.  
+# en_AU
+# en_GB
+de
+ru
+fr
+no

@@ -1,0 +1,27 @@
+# Copied from linux/SConscript 1.12, with 1,$s/linux/netbsd2/g
+# $Id: SConscript,v 1.6 2006/04/04 23:27:11 hvengel Exp $
+
+# import these variables from the parent build script
+from build_config import *
+
+Import('env', 'sources', 'ICCtoIT8_sources', 'moc_sources0', 'moc_sources1', 'moc_sources2', 'moc_sources3', 'moc_sources4', 'moc_sources5', 'moc_sources6', 'moc_sources7', 'moc_sources8', 'idir_bin', 'idir_lib', 'idir_prefix', 'idir_data')
+
+icc2it8=env.Program(target='icc2it8', source=ICCtoIT8_sources)
+
+env.Install(idir_bin, icc2it8)
+env.Alias('install', idir_prefix)
+
+# add the lprof target to the environment
+lprof=env.Program(target='lprof', source=sources + moc_sources0 + moc_sources1 + moc_sources2 + moc_sources3 + moc_sources4 + moc_sources5 + moc_sources6 + moc_sources7 + 'moc_sources8')
+
+env.Install(idir_bin, lprof)
+env.Alias('install', idir_prefix)
+env.Execute("../../createtrans2.sh")
+env.Execute("../../comptrans2.sh")
+
+env.Clean('icc2it8', ['../../build/netbsd2/ICCtoIT8'])
+
+env.Clean('lprof', ['../../build/netbsd2/checkerqt', '../../build/netbsd2/gammaqt', '../../build/netbsd2/IDqt', '../../build/netbsd2/liblprof', '../../build/netbsd2/libqtlcmswidgets', '../../build/netbsd2/lprofqt', '../../build/netbsd2/monqt', '../../build/netbsd2/parmsqt', '../../build/netbsd2/reference_inst_qt'])
+
+
+

@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="en-us"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  
+
+
+  <title>Profile Parameters Help</title><style type="text/css"><!--
+fn { margin-left: 1cm; text-indent: -1cm; }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }
+body { background: #ffffff; color: black; }
+--></style></head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+<tbody><tr bgcolor="#e5e5e5">
+<td valign="center">
+<a href="lprof-help.html">
+<font color="#004faf">Home</font></a>
+| <a href="monitor.html">
+<font color="#004faf">Monitor&nbsp;Tab</font></a>
+| <a href="preferences.html">
+<font color="#004faf">Preferences&nbsp;Tab</font></a>
+| <a href="checker.html">Profile Checker</a> | <a href="profile-id.html">
+<font color="#004faf">Profile Identification</font></a>
+| <a href="profile-parms.html">
+<font color="#004faf">Profile Parameters</font></a>
+| <a href="mon-val.html">
+<font color="#004faf">Monitor Values Dialog</font></a>
+| <a href="gamma.html">
+<font color="#004faf">Set Gamma Dialog</font></a>
+| <a href="inst-ref.html">
+<font color="#004faf">Install Reference File Dialog</font></a>
+| <a href="ufraw.html">
+<font color="#004faf">UFRAW Tutorial</font></a>
+</td>
+<td align="right" valign="center"><img src="lprof.png" align="right" border="0" height="32" width="64"></td></tr></tbody>
+</table>
+
+<h1 align="center"><small>Profile Parameters Dialog Help Window</small></h1>
+
+
+
+<p><big>LPROF is an open source application that creates ICC profile for cameras, scanners and monitors.</big><br>
+</p>
+
+<h4 align="center"><big>Resolution (CLUT points)</big></h4>
+
+<p><big>This set of radio buttons are used to select how many
+points will be included in the profiles Color Look Up Table
+(CLUT).&nbsp; Select smaller values to make small but less accurate
+profiles.&nbsp; Select larger values to create larger more accurate
+profiles.</big></p>
+
+<p><small></small></p>
+
+<h4 align="center"><big>Profile Verbosity</big></h4>
+
+<p><big>These radio button allow you to control how much
+additional information is stored in the profile.&nbsp; Selecting "Only
+required tags" will store only information that is absolutely needed in
+the profile.&nbsp; This makes for smaller profiles.&nbsp; "Store
+additional tags" stores additional information but does not store
+measurement information.&nbsp; "Verbose, store anything" will include
+everything that can be included in the profile including measurement
+information that is useful to the <a href="checker.html">Profile Checker.</a></big></p>
+
+<p><small></small></p>
+
+<h3 align="center">Regression Parameters</h3>
+
+
+
+<p><big>This set of sliders are used to fine tune the Regression
+analysis algorithm used to fit the CLUT curves to the chart data points
+when creating camera or scanner profiles. &nbsp;Setting Avg. Deviation
+to lower values will cause a closer fit of the data points but this can
+result in the CLUT curves being less smooth. &nbsp;Setting the
+Smoothness slider to higher values will result in smoother curves but a
+poorer fit of the data points. &nbsp; &nbsp;In most cases the default
+settings of 1.0 for Smoothness and 0.007 for Avg. Deviation will yield
+profiles with low delta e numbers (close fit) and very smooth CLUT
+curves that are in both cases better than the old "local convergence
+extrapolation" setting that has now been discontinued. &nbsp;But there
+may be some cases where different settings will give better profiles.</big><br>
+</p>
+
+<h4 align="center"><big>Chromatic adaption &amp; viewing condition</big></h4>
+
+
+
+<p><big>The default setting is Linear Bradford which is the
+standard setting recommended by the ICC.&nbsp;&nbsp; Use CIECAM97s to
+have more control over your profiles.&nbsp; This is particularly useful
+for monitor profiles since it allows you to compensate for viewing
+conditions.</big></p>
+
+
+
+<p align="center"><big>Copyright &copy; 1998-2005
+<a href="http://lprof.sourceforge.net/">LPROF</a>. All Rights Reserved.</big></p>
+
+
+
+<hr>
+<div align="center">
+<table border="0" cellspacing="0" width="100%"><tbody><tr>
+<td>Copyright &copy; 2005
+<a href="http://lprof.sourceforge.net/">LPROF</a></td><td align="center"><a href="trademarks.html">Trademarks</a>
+</td><td align="right"><div align="right">LPROF 1.11</div>
+</td></tr></tbody></table></div>
+
+</body></html>

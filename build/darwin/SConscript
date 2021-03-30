@@ -1,0 +1,31 @@
+# import these variables from the parent build script
+Import('env', 'sources', 'moc_sources0', 'moc_sources1', 'moc_sources2', 'moc_sources3', 'moc_sources4', 'moc_sources5', 'moc_sources6', 'moc_sources7', 'moc_sources8', 'ICCtoIT8_sources', 'idir_bin', 'idir_prefix')
+
+# add the specific things needed by MacOSX GCC
+macosx_incs=['/usr/include/malloc'] # only needed for cmsscn.c
+
+env.Replace(CXX='g++')
+env.Replace(CC='gcc')
+env.Replace(CPP='gcc')
+env.Replace(LINK='g++')
+# env.Append(CXXFLAGS='-DDBG_ENABLED')
+env.Append(CPPPATH=macosx_incs)
+
+icc2it8 = env.Program(target='icc2it8', source=ICCtoIT8_sources)
+env.Install(idir_bin, icc2it8)
+env.Alias('install', idir_prefix)
+env.Execute("../../createtrans2.sh")
+env.Execute("../../comptrans2.sh")
+
+# add the lprof target to the environment
+env.Program(target='lprof', source=sources + moc_sources0 + moc_sources1 + moc_sources2 + moc_sources3 + moc_sources4 + moc_sources5 + moc_sources6 + moc_sources7 + moc_sources8)
+
+env.Install(idir_bin, lprof)
+env.Alias('install', idir_prefix)
+
+mac_lprof = Action("cp build/darwin/lprof build/darwin/lprof.app/Contents/MacOS")
+env.AddPostAction(lprof, mac_lprof)
+
+env.Clean('icc2it8', ['../../build/darwin/ICCtoIT8'])
+
+env.Clean('lprof', ['../../build/darwin/checkerqt', '../../build/darwin/gammaqt', '../../build/darwin/IDqt', '../../build/darwin/liblprof', '../../build/darwin/libqtlcmswidgets', '../../build/darwin/lprofqt', '../../build/darwin/monqt', '../../build/darwin/parmsqt', '../../build/darwin/reference_inst_qt', '../../build/linux/argyll'])

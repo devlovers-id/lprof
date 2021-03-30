@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="en-us"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  
+
+
+  <title>Profile Monitor Tab Help</title><style type="text/css"><!--
+fn { margin-left: 1cm; text-indent: -1cm; }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }
+body { background: #ffffff; color: black; }
+--></style></head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+<tbody><tr bgcolor="#e5e5e5">
+<td valign="center">
+<a href="lprof-help.html">
+<font color="#004faf">Home</font></a>
+| <a href="monitor.html">
+<font color="#004faf">Monitor&nbsp;Tab</font></a>
+| <a href="preferences.html">
+<font color="#004faf">Preferences&nbsp;Tab</font></a>
+| <a href="checker.html">Profile Checker</a> | &nbsp;<a href="profile-id.html"><font color="#004faf">Profile Identification</font></a>
+| <a href="profile-parms.html">
+<font color="#004faf">Profile Parameters</font></a>
+| <a href="mon-val.html">
+<font color="#004faf">Monitor Values Dialog</font></a>
+| <a href="gamma.html">
+<font color="#004faf">Set Gamma Dialog</font></a>
+| <a href="inst-ref.html">
+<font color="#004faf">Install Reference File Dialog</font></a>
+| <a href="ufraw.html">
+<font color="#004faf">UFRAW Tutorial</font></a>
+</td>
+<td align="right" valign="center"><img src="lprof.png" align="right" border="0" height="32" width="64"></td></tr></tbody>
+</table>
+
+<h1 align="center"><small>Monitor Tab Help Window</small></h1>
+
+<p><big>LPROF is an open source application that creates ICC profile for cameras, scanners and monitors. <br>
+</big></p>
+
+<small><br>
+</small>
+
+<h4 align="center"><big>Create a Monitor Profile</big></h4>
+
+
+
+<p><big>LPROF can work in two
+different modes to generate a monitor profile. The "advanced" mode, that gives accurate
+profiles by using hardware devices like X-Rite DP92 or GretagMacbeth EyeOne,
+and the "simple" mode, that allow to you build reasonably accurate
+profiles without any additional hardware. <br>
+</big></p>
+
+<h4 align="center"><big>Building a monitor profile: a coarse approximation</big></h4>
+
+
+
+<p><big>Let's build our first monitor profile to check how all this
+stuff works. We don't need great accuracy at this point. We want to
+calibrate coarsely, just to visually check if all is going OK.&nbsp; First start LPROF.&nbsp; Since we
+need only a coarse profile on the "<a href="file:///home/heng/work/lprof/data/help/monitor.html">Monitor Profiler</a>"
+tab select the radio button labeled: "I want to build a coarse profile,
+giving approximate values".&nbsp; This is selected by default. We
+do not need any hardware measurements at this point only a few visual
+adjustments. Press the button labeled: "<a href="mon-val.html">Enter monitor values</a>". &nbsp; You will see
+the monitor values dialog. <br>
+</big></p>
+
+<h4 align="center"><big>Step 1: Set contrast</big></h4>
+
+
+
+<p><big>In order to obtain maximum
+performance, we need to adjust the physical monitor
+controls.
+Set contrast to near maximum, (yes, near maximum. This is the
+gain of the monitor and we need as much gain as the monitor can deliver).</big><br>
+</p>
+
+<h4 align="center"><big>Step 2: Set Gamma and Black Point</big></h4>
+
+
+
+<p><big>Now select the "<a href="gamma.html">Set Gamma and Black Point</a>" button.&nbsp; This dialog will help you to set both the gamma and black point for your monitor. </big><br>
+</p>
+
+<h4 align="center"><big>Step 4: Set White Point</big></h4>
+
+<p><big>For information on setting monitor White Point see <a href="mon-val.html">Rough Monitor Values</a>. <br>
+</big></p>
+
+<p><small></small></p>
+
+<h4 align="center"><big>Step 5: Set Primaries</big></h4>
+
+<small><br>
+</small>
+
+<big>Next adjustment is setting the primaries. </big><big>For information on setting Monitor Primaries values see <a href="mon-val.html">Rough Monitor Values.</a></big>
+<h4 align="center"><big>Step 6: Make Final Settings and Create Profile</big></h4>
+
+
+
+<p><big>Now you can use the "<a href="profile-id.html">Profile Identification</a>"
+dialog to fill in the info about your monitor. Although this is not
+strictly required, it could prevent a lot of confusion when you have
+more than a couple of profiles. Now we are ready to generate our
+profile. We must specify the output filename just like you did when
+creating a scanner/camera profile.&nbsp; For the name, we could use
+"CoarseMonitor.icm".&nbsp; Type in the name and then proceed to generate the profile by pressing
+the "Create Profile" button. If all is OK, the status console will show
+"Profile DONE!".&nbsp; Let's now check how well the profile is working by eye.
+Do this is basically the same way you proofed your scanner profile..</big></p>
+
+
+
+<div align="center"><small>
+</small>
+<h4><big>Building a Monitor Profile: Using a Hardware Measurement Device.</big><small></small></h4>
+<small>
+</small></div>
+
+
+
+<p><big>To measure your monitor, you need to create a IT8/CGATS measurement sheet file containing XYZ
+measurements for several RGB combinations for your monitor.&nbsp; A
+sample file of this kind can be found in "data/pics" directory. The
+file is
+called "sRGB.IT8" and it measures an ideal sRGB monitor. Use this file
+as a template for creating your own monitor measurement sheet file. You need
+to
+change the XYZ values to those read by your measurement device. Don't
+put any Lab value, just RGB and XYZ. Please keep the RGB values the
+sRGB.IT8 has. Optionally, you can use more patches to assure consistent
+color reproduction, but make sure to include at least the ones in
+sRGB.IT8.&nbsp; In the "data/pics" directory you will also find
+"monitor patches.tiff".&nbsp; This file contains color patches that
+correspond to the values used in sRGB.IT8 and it can be used to measure
+the RGB values from your monitor.&nbsp; Note that a large number of
+gray patches are needed. You can also add as many as you wish, with
+more gray patches, you will get better linearization control curves.
+You must specify at least 16 gray patches. </big><small><br>
+
+</small></p>
+
+
+
+<big>Now we will try this
+procedure, if you do not have a measurement hardware device you can use
+sRGB.IT8. We are going to generate a sRGB profile,
+by using the sRGB.IT8 measurement sheet. Go to the "Monitor Profiler"
+tab.&nbsp; Now, we are going to use it in advanced mode. Select the
+radio button labeled: "I want to build accurate profile from
+measurement sheet".&nbsp; Then press the "..." button located at right of the
+edit box labeled "Measurement Sheet".&nbsp; Select in "data/pics"
+directory the file called "sRGB.IT8". In the "Output profile file",
+select a new file name for your profile.&nbsp; Call it "my_sRGB.icm". I
+will use this sample to present another utility, the <a href="checker.html">profile checker</a>. Since the <a href="checker.html">profile checker</a> can understand advanced tags,
+we want to include all information in the profile, so select the
+"<a href="profile-parms.html">Profile Parameters</a>"
+button, and make sure to select "Verbose, store anything" in the
+"profile verbosity level" group. Now use the "<a href="profile-id.html">Profile Identification</a>" button and fill the info fields if you want
+(again, this is recommended) and press then press the "Create Profile" button. A
+new "my_srgb.icm" profile will be created. We will check now how
+accurate this profile is. Start the <a href="checker.html">profile checker</a> dialog selecting the "<a href="checker.html">Profile Checker</a>" button.
+The <a href="checker.html">profile checker</a> is a tool for inspecting some of profiles
+internals. In our case, we want to check the accuracy. <br>
+</big>
+<p><small></small></p>
+
+<p align="center"><big>Copyright &copy; 1998-2005
+<a href="http://lprof.sourceforge.net/">LPROF</a>. All Rights Reserved.</big></p>
+
+<hr>
+<div align="center">
+<table border="0" cellspacing="0" width="100%"><tbody><tr>
+<td>Copyright &copy; 2005
+<a href="http://lprof.sourceforge.net/">LPROF</a></td><td align="center"><a href="trademarks.html">Trademarks</a>
+</td><td align="right"><div align="right">LPROF 1.11</div>
+</td></tr></tbody></table></div>
+
+</body></html>

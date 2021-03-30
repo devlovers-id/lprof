@@ -1,0 +1,33 @@
+# import these variables from the parent build script
+from build_config import *
+
+Import('env', 'sources', 'ICCtoIT8_sources', 'moc_sources0', 'moc_sources1', 'moc_sources2', 'moc_sources3', 'moc_sources4', 'moc_sources5', 'moc_sources6', 'moc_sources7','moc_sources8', 'idir_bin', 'idir_lib', 'idir_prefix', 'idir_data')
+
+icc2it8=env.Program(target='icc2it8', source=ICCtoIT8_sources)
+# set correct access rights on executables and shared dir
+
+env.Install(idir_bin, icc2it8)
+icc2it8_inst = env.Install(idir_bin, icc2it8)
+chmod_icc2it8 = Action(Chmod(os.path.normpath(idir_prefix + '/bin/icc2it8'), 0755))
+env.AddPostAction(icc2it8_inst, chmod_icc2it8)
+env.Alias('install', icc2it8_inst)
+
+# add the lprof target to the environment
+lprof=env.Program(target='lprof', source=sources + moc_sources0 + moc_sources1 + moc_sources2 + moc_sources3 + moc_sources4 + moc_sources5 + moc_sources6 + moc_sources7 + moc_sources8)
+
+lprof_inst = env.Install(idir_bin, lprof)
+chmod_lprof = Action(Chmod(os.path.normpath(idir_prefix + '/bin/lprof'), 0755))
+env.AddPostAction(lprof_inst, chmod_lprof)
+# chmod_share = Action("chmod -R 755 " + idir_data)
+# env.AddPostAction(env['language_files'], chmod_share)
+env.Alias('install', lprof_inst)
+
+env.Execute("../../createtrans2.sh")
+env.Execute("../../comptrans2.sh")
+
+env.Clean('icc2it8', ['../../build/linux/ICCtoIT8'])
+
+env.Clean('lprof', ['../../build/linux/checkerqt', '../../build/linux/gammaqt', '../../build/linux/IDqt', '../../build/linux/liblprof', '../../build/linux/libqtlcmswidgets', '../../build/linux/lprofqt', '../../build/linux/monqt', '../../build/linux/parmsqt', '../../build/linux/reference_inst_qt', '../../build/linux/argyll'])
+
+
+

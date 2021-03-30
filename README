@@ -1,0 +1,254 @@
+$Id: README,v 1.13 2006/03/22 00:34:11 hvengel Exp $
+
+ THIS SOFTWARE IS PROVIDED "AS-IS" AND WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS, IMPLIED OR OTHERWISE, INCLUDING WITHOUT LIMITATION, ANY
+ WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+
+ IN NO EVENT SHALL ANYONE WHO HAS ANY PART IN THE DEVELOPEMENT OR 
+ DISTRIBUTION OF THIS SOFTWARE BE LIABLE FOR ANY SPECIAL, INCIDENTAL, 
+ INDIRECT OR CONSEQUENTIAL DAMAGES OF ANY KIND, OR ANY DAMAGES 
+ WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER OR 
+ NOT ADVISED OF THE POSSIBILITY OF DAMAGE, AND ON ANY THEORY OF
+ LIABILITY, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE
+ OF THIS SOFTWARE.
+
+lprof is distributed under
+
+                GNU GENERAL PUBLIC LICENSE
+
+ As a special exception, Klas Kalass and Marti Maria gives permission to link 
+ this program with Qt non-commercial edition, and distribute the resulting 
+ executable, without including the source code for the Qt non-commercial 
+ edition in the source distribution.
+
+ See file COPYING. for details
+
+   This is the 4th. public release the profilers. It has not been 
+   tested extensively, so is possible some bugs still exist. 
+   If so, sorry for the inconvenience, and please feel free to submit 
+   any suggestion/solution (if you can find it) in the lprof discussion 
+   forum at:
+
+         http://sourceforge.net/forum/forum.php?forum_id=488887
+ 
+   The main site for the package is located at
+
+         http://sourceforge.net/projects/lprof
+
+  This site has a tracker for reporting bugs and another tracker for 
+  making enhancement requests.
+
+
+  Requirements
+  ============
+
+  In order to execute the profiling utilities, you will need:
+
+  - Trolltech's Qt installed (www.trolltech.com) any version of the 3.x series
+      SuSE users will also need to install package "qt3-devel-doc" in order to 
+      have a QT library required by the LPROF help system. 
+  - Littlecms color engine installed (www.littlecms.com) version 1.12 or higher
+  - GNU C compiler gcc or equivalent installed.
+  - MS VC++ 6 in Windows systems required in order to use Qt.
+  - Python 1.53 or higher to be able to run SCons
+  - VIGRA 1.30 or later available here 
+       http://kogs-www.informatik.uni-hamburg.de/~koethe/vigra/
+ 
+  Additionally, in order to profile a scanner or camera, you will 
+  need an IT8.7 target.  These are available from here:
+
+  http://www.targets.coloraid.de/
+
+  CVS does not contain scons-local.  For those building from CVS 
+  you must have installed scons that is AT LEAST version 0.96.90 
+  or put a copy of scons-local in the LPROF source tree. Earlier 
+  versions will fail with errors while trying to configure QT.  
+  The other option is to get a copy of scons-local, either 
+  0.96.90 or 0.96.91 will work, and untar it in the root of the 
+  LPROF source tree.
+
+  Building and Installing 
+  =======================
+
+  Starting with version 1.11.0 lprof uses SCons to build and install the 
+  software and data files.  You will need to install SCons if you do not 
+  already have it on your system.  In addition, SCons requires python 1.53 
+  or later to run.  This application package now comes with a local copy 
+  of scons in the soruce tarball.  This is to insure that users were 
+  building with a known version of SCons.
+  
+  Unpack the tarball or if you are going to use a copy from CVS you must 
+  also place a copy of scons-local-0.96.91 in the root directory of the 
+  source tree.  In the root directory of the lprof source tree invoke
+
+  $ python scons.py PREFIX=/where/to/install
+
+  to build lprof.  If PREFIX is not specified, it defaults to /usr/local.
+  Then (with adequate privileges to write to PREFIX):
+
+  $ python scons.py install 
+
+  to install lprof (executables, data, help) to the correct locations 
+  in PREFIX.  By default this will place the executable files in 
+  /usr/local/bin and data and help files in /usr/local/share/lprof unless 
+  you have specified a different PREFIX.  In most cases you will need to 
+  have root authority to install LPROF if the PREFIX is not located in your 
+  home directory.
+  
+  To clean the build directories invoke
+
+  $ python scons.py -c 
+
+  which will remove all files created while building the software from
+  the build directories.
+
+  To remove lprof from the system, invoke (with adequate privileges):
+
+  $ python scons.py -c install 
+
+  which will do everything scons -c does and also remove files installed 
+  by "scons install" (into PREFIX).
+
+  Running scons will build two executable files which will end up in
+  the build directory for whatever platform you are building on.  For
+  example on Linux the executables will be created in:
+
+  lprof/build/linux
+
+  The main executable is named lprof, and includes the functionality
+  of the four main programs that were built by earlier versions
+  (qtmeasurementtool, qtmonitorprofiler, qtscannerprofiler and
+  qtprofilechecker) into a single fully integrated piece of software.
+  icc2it8 is also part of version 1.11 and is unchanged from earlier 
+  versions.
+
+  SCons Command Line Arguments
+  ============================
+
+  There are a number of command line arguments that can be used to 
+  customize how lprof will build.
+
+  qt_directory 
+
+  By default the lprof scons build will search for QT by first 
+  checking to see if QTDIR is set on the build machine.  If it 
+  is it will be added to a list of directories where QT is 
+  commonly installed and it will then check that list of directories 
+  for a valid QT installation.
+
+  If qt_directory is set on the command line:
+ 
+   $ python scons.py qt_directory=/some/directory
+
+  The build scripts will check to see if a valid QT installation is 
+  present in /some/directory.  It will not check any other directories
+  for a QT installation.
+
+  If the build scripts fail to find QT in the above steps it will 
+  exit with an error message.
+
+  PREFIX
+
+  To specify a non-default installation prefix use:
+
+    $ python scons.py PREFIX=/nondefault/location
+
+  The default installation location is /usr/local
+
+  ccflags
+
+  The default c compiler flags for the lprof build system are -O2 -Wall -pipe
+
+  To change this use:
+
+     $ python scons.py ccflags="-other-valid-flags"
+
+  cxxflags
+
+  This is just like ccflags only it applies to the c++ compiler.
+
+  ldflags
+
+  To set values for LDFLAGS to be passed to the linker us ldflags.  
+  The default value is '' (empty string).  If you add more than one 
+  item inclose the whole string in quotes and separate items with
+  spaces.
+
+  added_cppflags
+
+  This will allow you to add additional items to the CPPPATH variable
+  that is passed to preprocessor.  Use this just like ldflags.
+
+  added_libpath
+
+  This will allow you to add directories to the LIBPATH.  Works just 
+  like added_cppflags
+
+  -j
+
+  For those with SMP systems you can force SCons to compile more than 
+  source file at a time by using the -j parameter.  
+
+   $ python scons.py -jn
+
+  Where n is the number of source files to send to the compiler at 
+  any given time.  Optimum value for n is the number of processors 
+  plus one.
+
+ Installing new target reference files
+ =====================================
+ 
+  Starting with version 1.11 lprof now has a dialog to install IT8.7 
+  reference files.  The dialog will allow the user to select the 
+  correct picker template for the IT8.7 chart and when the user later 
+  selects that IT8.7 chart lprof will automatically select the correct 
+  picker template.
+
+ Translations (Currently not valid)
+ ============
+
+ Work on support for translating lprof's user interface to other languages is
+ in progress.
+
+ It is currently possible to generate the translation files, but lprof does not
+ yet use them. To begin translating lprof, run:
+
+ [XXX is this still true in the scons world?]
+ [hvengel No this is not true.  The person working on this needs to add]
+ [the translation stuff to the scons scripts and this needs to be updated]  
+     make translations-update
+
+ to generate the ts files in the 'translations' directory. The file
+ 'translations/languages' controls which languages will have ts files
+ generated for them, so simply add your language there if it is not
+ generated.
+
+ Once you've finished translating, run:
+
+     make translations-compile
+
+ to generate the qm files that lprof will use when loading its translations.
+ Developers should note that it is not necessary to ship the qm files or store
+ them in CVS; they can be generated as part of the build process.
+
+ Final notes
+ ===========
+
+ Don't expect magic. These profilers will build ICC profiles for your
+ devices, but is up to the application to use the profiles in order to
+ accomplish color management. There are a number of open source 
+ applications that do know how to use these profiles.  These include
+ CinePaint, Scribus, ImageMagick, UFRAW and Krita. 
+
+ Littlecms also comes with a utility for converting tiff files. If 
+ you want to see how using ICC profiles can better your systems 
+ color reproduction, convert a scanned image to monitor space using 
+ either lcms or ImageMagick.  This is how it would be done with lcms.
+
+    tifficc /iscanner.icm /omonitor.icm image_in.tif image_out.tif
+
+ This version of lprof now supports tiff files in addition to jpeg 
+ and most other graphic file formats if the correct libraries are 
+ installed.
+ 
+ 

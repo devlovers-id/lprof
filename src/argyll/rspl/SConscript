@@ -1,0 +1,4 @@
+# $Id: SConscript,v 1.2 2006/02/19 23:59:12 hvengel Exp $
+Import('env')
+env.StaticLibrary('rspl', [ 'rspl.c', 'scat.c', 'rev.c', 'spline.c', 'opt.c' ])
+

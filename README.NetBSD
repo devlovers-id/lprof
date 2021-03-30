@@ -1,0 +1,34 @@
+#!/bin/sh
+
+# $Id: README.NetBSD,v 1.6 2005/12/09 20:30:14 lexort Exp $
+
+# This README is really a script to build lprof on NetBSD, assuming
+# that pkgsrc packages are installed (in /usr/pkg).  One needs
+# qt3-libs, qt3-tools, libtiff, lcms, TiffIO.
+
+# This does not yet work.
+
+# XXX Setting -R in ldflags should not be necessary because
+# added_libpath should put -R as well as -L on systems where that is
+# the convention.
+
+export MOC=/usr/pkg/qt3/bin/moc
+export UIC=/usr/pkg/qt3/bin/uic
+
+scons \
+  --cache-disable \
+  --debug=count \
+  --debug=dtree \
+  --debug=explain \
+  --debug=includes \
+  --debug=memory \
+  --debug=objects \
+  --debug=pdb \
+  --debug=presub \
+  --debug=time \
+  --debug=tree \
+  PREFIX=/usr/pkg \
+  qt_directory=/usr/pkg/qt3 \
+  added_cppflags="/usr/pkg/include" \
+  added_libpath="/usr/pkg/lib /usr/pkg/qt3/lib/plugins/imageformats" \
+  ldflags="-R/usr/pkg/lib"

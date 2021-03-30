@@ -1,0 +1,2191 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>lprofMainBase</class>
+<author>Hal V. Engel</author>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>lprofMainBase</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>899</width>
+            <height>640</height>
+        </rect>
+    </property>
+    <property name="sizePolicy">
+        <sizepolicy>
+            <hsizetype>4</hsizetype>
+            <vsizetype>4</vsizetype>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+        </sizepolicy>
+    </property>
+    <property name="caption">
+        <string>Little CMS Profiler</string>
+    </property>
+    <property name="sizeGripEnabled">
+        <bool>true</bool>
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <property name="margin">
+            <number>0</number>
+        </property>
+        <property name="spacing">
+            <number>0</number>
+        </property>
+        <widget class="QLayoutWidget" row="0" column="0" rowspan="1" colspan="2">
+            <property name="name">
+                <cstring>layout6</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <property name="margin">
+                    <number>0</number>
+                </property>
+                <property name="spacing">
+                    <number>0</number>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>textLabel1_3</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>0</hsizetype>
+                            <vsizetype>0</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                        <size>
+                            <width>0</width>
+                            <height>43</height>
+                        </size>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                    <property name="pixmap">
+                        <pixmap>image0</pixmap>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>Main_label</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>5</hsizetype>
+                            <vsizetype>0</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                        <size>
+                            <width>0</width>
+                            <height>45</height>
+                        </size>
+                    </property>
+                    <property name="paletteBackgroundColor">
+                        <color>
+                            <red>255</red>
+                            <green>255</green>
+                            <blue>255</blue>
+                        </color>
+                    </property>
+                    <property name="font">
+                        <font>
+                            <pointsize>21</pointsize>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string>LCMS Profiler</string>
+                    </property>
+                    <property name="alignment">
+                        <set>AlignCenter</set>
+                    </property>
+                </widget>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>textLabel3</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>0</hsizetype>
+                            <vsizetype>0</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                        <size>
+                            <width>0</width>
+                            <height>47</height>
+                        </size>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                    <property name="pixmap">
+                        <pixmap>image1</pixmap>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+        <widget class="QGroupBox" row="1" column="0">
+            <property name="name">
+                <cstring>groupBox22</cstring>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>2</hsizetype>
+                    <vsizetype>7</vsizetype>
+                    <horstretch>100</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>300</width>
+                    <height>0</height>
+                </size>
+            </property>
+            <property name="maximumSize">
+                <size>
+                    <width>450</width>
+                    <height>32767</height>
+                </size>
+            </property>
+            <property name="title">
+                <string></string>
+            </property>
+            <grid>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLayoutWidget" row="0" column="0">
+                    <property name="name">
+                        <cstring>layout45</cstring>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QPushButton">
+                            <property name="name">
+                                <cstring>ProfIDpushButton</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Profile Identification</string>
+                            </property>
+                            <property name="toolTip" stdset="0">
+                                <string>Press this to change profile identification information.</string>
+                            </property>
+                            <property name="whatsThis" stdset="0">
+                                <string>Press this to change profile identification information.</string>
+                            </property>
+                        </widget>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer22</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Maximum</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>500</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                    </hbox>
+                </widget>
+                <widget class="QGroupBox" row="4" column="0">
+                    <property name="name">
+                        <cstring>groupBox3</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>2</hsizetype>
+                            <vsizetype>7</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="title">
+                        <string>Messages</string>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Messages</string>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>Messages</string>
+                    </property>
+                    <grid>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QTextEdit" row="0" column="0">
+                            <property name="name">
+                                <cstring>ProgressConsole</cstring>
+                            </property>
+                            <property name="resizePolicy">
+                                <enum>AutoOneFit</enum>
+                            </property>
+                            <property name="dragAutoScroll">
+                                <bool>false</bool>
+                            </property>
+                            <property name="readOnly">
+                                <bool>true</bool>
+                            </property>
+                            <property name="undoRedoEnabled">
+                                <bool>false</bool>
+                            </property>
+                            <property name="autoFormatting">
+                                <set>AutoNone</set>
+                            </property>
+                        </widget>
+                    </grid>
+                </widget>
+                <widget class="QTextEdit" row="3" column="0">
+                    <property name="name">
+                        <cstring>textEditProfileParms</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>2</hsizetype>
+                            <vsizetype>1</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Profile parameter information.  This will affect how the profile is created.</string>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>file parameter information.  This will affect how the profile is created.</string>
+                    </property>
+                </widget>
+                <widget class="QLayoutWidget" row="2" column="0">
+                    <property name="name">
+                        <cstring>layout44</cstring>
+                    </property>
+                    <hbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QPushButton">
+                            <property name="name">
+                                <cstring>ProfParmspushButton</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Profile Parameters</string>
+                            </property>
+                            <property name="toolTip" stdset="0">
+                                <string>Press this to change profile parameters.</string>
+                            </property>
+                            <property name="whatsThis" stdset="0">
+                                <string>Press this to change profile parameters.</string>
+                            </property>
+                        </widget>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer23</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Horizontal</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Maximum</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>500</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                    </hbox>
+                </widget>
+                <widget class="QTextEdit" row="1" column="0">
+                    <property name="name">
+                        <cstring>textEditProfileID</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>2</hsizetype>
+                            <vsizetype>4</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Profile indentification information that will be included in the profile tags..</string>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>Profile indentification information that will be included in the profile tags.</string>
+                    </property>
+                </widget>
+            </grid>
+        </widget>
+        <widget class="QTabWidget" row="1" column="1">
+            <property name="name">
+                <cstring>TabProfiler</cstring>
+            </property>
+            <property name="sizePolicy">
+                <sizepolicy>
+                    <hsizetype>5</hsizetype>
+                    <vsizetype>7</vsizetype>
+                    <horstretch>150</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
+            </property>
+            <property name="minimumSize">
+                <size>
+                    <width>300</width>
+                    <height>200</height>
+                </size>
+            </property>
+            <property name="toolTip" stdset="0">
+                <string></string>
+                <comment>When the four corners have been selected the picker template will be placed and the measurement file will be created.  You can always adjust the location of the picker template by adjusting the selected corner location.</comment>
+            </property>
+            <property name="whatsThis" stdset="0">
+                <string></string>
+            </property>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>Cam_and_Scan_tab</cstring>
+                </property>
+                <attribute name="title">
+                    <string>Camera/Scanner Profiler</string>
+                </attribute>
+                <grid>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QFrame" row="2" column="0" rowspan="1" colspan="2">
+                        <property name="name">
+                            <cstring>frame33</cstring>
+                        </property>
+                        <property name="sizePolicy">
+                            <sizepolicy>
+                                <hsizetype>2</hsizetype>
+                                <vsizetype>0</vsizetype>
+                                <horstretch>0</horstretch>
+                                <verstretch>0</verstretch>
+                            </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>0</width>
+                                <height>100</height>
+                            </size>
+                        </property>
+                        <property name="frameShape">
+                            <enum>StyledPanel</enum>
+                        </property>
+                        <property name="frameShadow">
+                            <enum>Raised</enum>
+                        </property>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QLayoutWidget" row="0" column="0">
+                                <property name="name">
+                                    <cstring>layout11</cstring>
+                                </property>
+                                <hbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <widget class="QLabel">
+                                        <property name="name">
+                                            <cstring>textLabel1_2</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Output Profile File:</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLineEdit">
+                                        <property name="name">
+                                            <cstring>OutputFileEdit</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>2</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>0</width>
+                                                <height>35</height>
+                                            </size>
+                                        </property>
+                                        <property name="toolTip" stdset="0">
+                                            <string>Please enter or select an output file for the profile.</string>
+                                        </property>
+                                        <property name="whatsThis" stdset="0">
+                                            <string>Profile output file name.</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QPushButton">
+                                        <property name="name">
+                                            <cstring>OutputFileSelBtn</cstring>
+                                        </property>
+                                        <property name="maximumSize">
+                                            <size>
+                                                <width>40</width>
+                                                <height>32767</height>
+                                            </size>
+                                        </property>
+                                        <property name="text">
+                                            <string>...</string>
+                                        </property>
+                                        <property name="toolTip" stdset="0">
+                                            <string>Press this to bring up a file dialog.</string>
+                                        </property>
+                                        <property name="whatsThis" stdset="0">
+                                            <string>Press this to bring up a file dialog.</string>
+                                        </property>
+                                    </widget>
+                                </hbox>
+                            </widget>
+                            <widget class="QLayoutWidget" row="1" column="0">
+                                <property name="name">
+                                    <cstring>layout12</cstring>
+                                </property>
+                                <hbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <widget class="QPushButton">
+                                        <property name="name">
+                                            <cstring>TheGoButton</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>4</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>130</width>
+                                                <height>0</height>
+                                            </size>
+                                        </property>
+                                        <property name="text">
+                                            <string>Create Profile</string>
+                                        </property>
+                                        <property name="autoResize">
+                                            <bool>false</bool>
+                                        </property>
+                                        <property name="default">
+                                            <bool>true</bool>
+                                        </property>
+                                        <property name="toolTip" stdset="0">
+                                            <string>To create a profile press this.</string>
+                                        </property>
+                                        <property name="whatsThis" stdset="0">
+                                            <string>Button to create a profile.</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QPushButton">
+                                        <property name="name">
+                                            <cstring>ProfCheckpushButton</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>4</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>140</width>
+                                                <height>0</height>
+                                            </size>
+                                        </property>
+                                        <property name="text">
+                                            <string>Profile Checker</string>
+                                        </property>
+                                        <property name="toolTip" stdset="0">
+                                            <string>Push to bring up the profile checker.</string>
+                                        </property>
+                                        <property name="whatsThis" stdset="0">
+                                            <string>Run the profile checker.</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QProgressBar">
+                                        <property name="name">
+                                            <cstring>ProgressBar</cstring>
+                                        </property>
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>100</width>
+                                                <height>20</height>
+                                            </size>
+                                        </property>
+                                        <property name="progress">
+                                            <number>0</number>
+                                        </property>
+                                        <property name="toolTip" stdset="0">
+                                            <string>Progress bar</string>
+                                        </property>
+                                        <property name="whatsThis" stdset="0">
+                                            <string>Progress bar</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QPushButton">
+                                        <property name="name">
+                                            <cstring>pushButtonHelp</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>4</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>50</width>
+                                                <height>0</height>
+                                            </size>
+                                        </property>
+                                        <property name="text">
+                                            <string>Help</string>
+                                        </property>
+                                    </widget>
+                                </hbox>
+                            </widget>
+                        </grid>
+                    </widget>
+                    <widget class="QFrame" row="0" column="0">
+                        <property name="name">
+                            <cstring>CanvasFrame</cstring>
+                        </property>
+                        <property name="sizePolicy">
+                            <sizepolicy>
+                                <hsizetype>4</hsizetype>
+                                <vsizetype>2</vsizetype>
+                                <horstretch>0</horstretch>
+                                <verstretch>0</verstretch>
+                            </sizepolicy>
+                        </property>
+                        <property name="cursor">
+                            <cursor>2</cursor>
+                        </property>
+                        <property name="frameShape">
+                            <enum>Box</enum>
+                        </property>
+                        <property name="frameShadow">
+                            <enum>Sunken</enum>
+                        </property>
+                    </widget>
+                    <widget class="QLayoutWidget" row="1" column="0">
+                        <property name="name">
+                            <cstring>layout42</cstring>
+                        </property>
+                        <hbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QToolButton">
+                                <property name="name">
+                                    <cstring>LoadBtn</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>5</hsizetype>
+                                        <vsizetype>5</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>210</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>Load Image</string>
+                                </property>
+                                <property name="toolTip" stdset="0">
+                                    <string>Load IT8.7 target image then select target corners.</string>
+                                </property>
+                                <property name="whatsThis" stdset="0">
+                                    <string>Select the target image to be used to make the measurements used to create the profile.</string>
+                                </property>
+                            </widget>
+                            <widget class="IT8Selector">
+                                <property name="name">
+                                    <cstring>TargetSelector</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>3</hsizetype>
+                                        <vsizetype>5</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="Prompt" stdset="0">
+                                    <string>IT8 Target</string>
+                                </property>
+                                <property name="toolTip" stdset="0">
+                                    <string>Select your IT8.7 target from the list.  If it is not in the list then use the Reference File Installer to add it.</string>
+                                </property>
+                                <property name="whatsThis" stdset="0">
+                                    <string>IT8.7 target list.</string>
+                                </property>
+                            </widget>
+                            <spacer>
+                                <property name="name">
+                                    <cstring>spacer60</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Fixed</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>3</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                        </hbox>
+                    </widget>
+                </grid>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>Monitor_tab</cstring>
+                </property>
+                <attribute name="title">
+                    <string>Monitor Profiler</string>
+                </attribute>
+                <grid>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QLabel" row="0" column="0">
+                        <property name="name">
+                            <cstring>PixmapLabel1</cstring>
+                        </property>
+                        <property name="sizePolicy">
+                            <sizepolicy>
+                                <hsizetype>0</hsizetype>
+                                <vsizetype>0</vsizetype>
+                                <horstretch>0</horstretch>
+                                <verstretch>0</verstretch>
+                            </sizepolicy>
+                        </property>
+                        <property name="scaledContents">
+                            <bool>false</bool>
+                        </property>
+                        <property name="alignment">
+                            <set>AlignCenter</set>
+                        </property>
+                        <property name="hAlign" stdset="0">
+                        </property>
+                    </widget>
+                    <widget class="QLabel" row="0" column="1">
+                        <property name="name">
+                            <cstring>TextLabel5</cstring>
+                        </property>
+                        <property name="sizePolicy">
+                            <sizepolicy>
+                                <hsizetype>7</hsizetype>
+                                <vsizetype>5</vsizetype>
+                                <horstretch>0</horstretch>
+                                <verstretch>0</verstretch>
+                            </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>0</width>
+                                <height>0</height>
+                            </size>
+                        </property>
+                        <property name="text">
+                            <string>Select the way you want to profile your monitor and the resulting profile filename. Press Create Profile to start profiling.</string>
+                        </property>
+                        <property name="alignment">
+                            <set>WordBreak|AlignVCenter|AlignLeft</set>
+                        </property>
+                        <property name="whatsThis" stdset="0">
+                            <string>(Required) name of file to save the profile</string>
+                        </property>
+                        <property name="wordwrap" stdset="0">
+                        </property>
+                    </widget>
+                    <widget class="QButtonGroup" row="1" column="0" rowspan="1" colspan="2">
+                        <property name="name">
+                            <cstring>ButtonGroup6</cstring>
+                        </property>
+                        <property name="sizePolicy">
+                            <sizepolicy>
+                                <hsizetype>5</hsizetype>
+                                <vsizetype>1</vsizetype>
+                                <horstretch>0</horstretch>
+                                <verstretch>0</verstretch>
+                            </sizepolicy>
+                        </property>
+                        <property name="title">
+                            <string>Profiling method</string>
+                        </property>
+                        <property name="toolTip" stdset="0">
+                            <string>Select a monitor profiling method.</string>
+                        </property>
+                        <property name="whatsThis" stdset="0">
+                            <string>Select a monitor profiling method.</string>
+                        </property>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <spacer row="0" column="1">
+                                <property name="name">
+                                    <cstring>Spacer26</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Vertical</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>20</width>
+                                        <height>32</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                            <widget class="QRadioButton" row="1" column="0" rowspan="1" colspan="4">
+                                <property name="name">
+                                    <cstring>RadioCoarse</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>I want to build a coarse profile, giving approximate values</string>
+                                </property>
+                                <property name="checked">
+                                    <bool>true</bool>
+                                </property>
+                                <property name="toolTip" stdset="0">
+                                    <string>To create monitor profile when you do not have hardware to measure monitor characteristics.</string>
+                                </property>
+                                <property name="whatsThis" stdset="0">
+                                    <string>To create monitor profile when you do not have hardware to measure monitor characteristics.</string>
+                                </property>
+                            </widget>
+                            <spacer row="3" column="1">
+                                <property name="name">
+                                    <cstring>Spacer24</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Vertical</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>20</width>
+                                        <height>32</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                            <spacer row="5" column="1">
+                                <property name="name">
+                                    <cstring>Spacer23</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Vertical</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>20</width>
+                                        <height>32</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                            <widget class="QLayoutWidget" row="6" column="0" rowspan="1" colspan="4">
+                                <property name="name">
+                                    <cstring>layout15</cstring>
+                                </property>
+                                <hbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <widget class="IT8FileSelector">
+                                        <property name="name">
+                                            <cstring>MonMeasurementSheet</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>5</hsizetype>
+                                                <vsizetype>5</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>0</width>
+                                                <height>34</height>
+                                            </size>
+                                        </property>
+                                        <property name="FileMask" stdset="0">
+                                            <string>IT8/CGATS.5 files (*.it? *.cgs *.IT? *.CGS);;All files (*.*)</string>
+                                        </property>
+                                        <property name="Prompt" stdset="0">
+                                            <string>Measurement Sheet</string>
+                                        </property>
+                                        <property name="toolTip" stdset="0">
+                                            <string>Monitor measurement sheet selector.</string>
+                                        </property>
+                                        <property name="whatsThis" stdset="0">
+                                            <string>Select a monitor measurement sheet to be used for creating a monitor profile.</string>
+                                        </property>
+                                    </widget>
+                                    <spacer>
+                                        <property name="name">
+                                            <cstring>spacer16</cstring>
+                                        </property>
+                                        <property name="orientation">
+                                            <enum>Horizontal</enum>
+                                        </property>
+                                        <property name="sizeType">
+                                            <enum>Fixed</enum>
+                                        </property>
+                                        <property name="sizeHint">
+                                            <size>
+                                                <width>20</width>
+                                                <height>20</height>
+                                            </size>
+                                        </property>
+                                    </spacer>
+                                </hbox>
+                            </widget>
+                            <spacer row="7" column="1">
+                                <property name="name">
+                                    <cstring>Spacer22</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Vertical</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Fixed</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>20</width>
+                                        <height>30</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                            <widget class="QFrame" row="8" column="0" rowspan="1" colspan="4">
+                                <property name="name">
+                                    <cstring>frame33_2</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>2</hsizetype>
+                                        <vsizetype>0</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>69</height>
+                                    </size>
+                                </property>
+                                <property name="frameShape">
+                                    <enum>StyledPanel</enum>
+                                </property>
+                                <property name="frameShadow">
+                                    <enum>Raised</enum>
+                                </property>
+                                <grid>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <widget class="QLayoutWidget" row="0" column="0">
+                                        <property name="name">
+                                            <cstring>layout11_2</cstring>
+                                        </property>
+                                        <hbox>
+                                            <property name="name">
+                                                <cstring>unnamed</cstring>
+                                            </property>
+                                            <widget class="QLabel">
+                                                <property name="name">
+                                                    <cstring>textLabel1_2_2</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Output Profile File:</string>
+                                                </property>
+                                            </widget>
+                                            <widget class="QLineEdit">
+                                                <property name="name">
+                                                    <cstring>OutputFileEdit_Mon</cstring>
+                                                </property>
+                                                <property name="sizePolicy">
+                                                    <sizepolicy>
+                                                        <hsizetype>7</hsizetype>
+                                                        <vsizetype>0</vsizetype>
+                                                        <horstretch>0</horstretch>
+                                                        <verstretch>0</verstretch>
+                                                    </sizepolicy>
+                                                </property>
+                                                <property name="minimumSize">
+                                                    <size>
+                                                        <width>0</width>
+                                                        <height>35</height>
+                                                    </size>
+                                                </property>
+                                                <property name="toolTip" stdset="0">
+                                                    <string>Please enter or select an output file for the profile.</string>
+                                                </property>
+                                                <property name="whatsThis" stdset="0">
+                                                    <string>Profile output file name.</string>
+                                                </property>
+                                            </widget>
+                                            <widget class="QPushButton">
+                                                <property name="name">
+                                                    <cstring>OutputFileSelBtn_2</cstring>
+                                                </property>
+                                                <property name="maximumSize">
+                                                    <size>
+                                                        <width>40</width>
+                                                        <height>32767</height>
+                                                    </size>
+                                                </property>
+                                                <property name="text">
+                                                    <string>...</string>
+                                                </property>
+                                                <property name="toolTip" stdset="0">
+                                                    <string>Press this to bring up a file dialog.</string>
+                                                </property>
+                                                <property name="whatsThis" stdset="0">
+                                                    <string>Press this to bring up a file dialog.</string>
+                                                </property>
+                                            </widget>
+                                        </hbox>
+                                    </widget>
+                                    <widget class="QLayoutWidget" row="1" column="0">
+                                        <property name="name">
+                                            <cstring>layout12_2</cstring>
+                                        </property>
+                                        <hbox>
+                                            <property name="name">
+                                                <cstring>unnamed</cstring>
+                                            </property>
+                                            <widget class="QPushButton">
+                                                <property name="name">
+                                                    <cstring>TheGoButton_2</cstring>
+                                                </property>
+                                                <property name="sizePolicy">
+                                                    <sizepolicy>
+                                                        <hsizetype>4</hsizetype>
+                                                        <vsizetype>0</vsizetype>
+                                                        <horstretch>0</horstretch>
+                                                        <verstretch>0</verstretch>
+                                                    </sizepolicy>
+                                                </property>
+                                                <property name="minimumSize">
+                                                    <size>
+                                                        <width>130</width>
+                                                        <height>0</height>
+                                                    </size>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Create Profile</string>
+                                                </property>
+                                                <property name="autoResize">
+                                                    <bool>false</bool>
+                                                </property>
+                                                <property name="default">
+                                                    <bool>true</bool>
+                                                </property>
+                                                <property name="toolTip" stdset="0">
+                                                    <string>To create a profile press this.</string>
+                                                </property>
+                                                <property name="whatsThis" stdset="0">
+                                                    <string>Button to create a profile.</string>
+                                                </property>
+                                            </widget>
+                                            <widget class="QPushButton">
+                                                <property name="name">
+                                                    <cstring>ProfCheckpushButton_2</cstring>
+                                                </property>
+                                                <property name="sizePolicy">
+                                                    <sizepolicy>
+                                                        <hsizetype>4</hsizetype>
+                                                        <vsizetype>0</vsizetype>
+                                                        <horstretch>0</horstretch>
+                                                        <verstretch>0</verstretch>
+                                                    </sizepolicy>
+                                                </property>
+                                                <property name="minimumSize">
+                                                    <size>
+                                                        <width>140</width>
+                                                        <height>0</height>
+                                                    </size>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Profile Checker</string>
+                                                </property>
+                                                <property name="toolTip" stdset="0">
+                                                    <string>Push to bring up the profile checker.</string>
+                                                </property>
+                                                <property name="whatsThis" stdset="0">
+                                                    <string>Run the profile checker.</string>
+                                                </property>
+                                            </widget>
+                                            <widget class="QProgressBar">
+                                                <property name="name">
+                                                    <cstring>ProgressBar_2</cstring>
+                                                </property>
+                                                <property name="minimumSize">
+                                                    <size>
+                                                        <width>50</width>
+                                                        <height>20</height>
+                                                    </size>
+                                                </property>
+                                                <property name="progress">
+                                                    <number>0</number>
+                                                </property>
+                                                <property name="toolTip" stdset="0">
+                                                    <string>Progress bar</string>
+                                                </property>
+                                                <property name="whatsThis" stdset="0">
+                                                    <string>Progress bar</string>
+                                                </property>
+                                            </widget>
+                                            <widget class="QPushButton">
+                                                <property name="name">
+                                                    <cstring>pushButtonHelp_2</cstring>
+                                                </property>
+                                                <property name="sizePolicy">
+                                                    <sizepolicy>
+                                                        <hsizetype>4</hsizetype>
+                                                        <vsizetype>0</vsizetype>
+                                                        <horstretch>0</horstretch>
+                                                        <verstretch>0</verstretch>
+                                                    </sizepolicy>
+                                                </property>
+                                                <property name="minimumSize">
+                                                    <size>
+                                                        <width>50</width>
+                                                        <height>0</height>
+                                                    </size>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Help</string>
+                                                </property>
+                                            </widget>
+                                        </hbox>
+                                    </widget>
+                                </grid>
+                            </widget>
+                            <spacer row="2" column="0">
+                                <property name="name">
+                                    <cstring>Spacer13</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Fixed</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>50</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                            <widget class="QLayoutWidget" row="2" column="1">
+                                <property name="name">
+                                    <cstring>layout42</cstring>
+                                </property>
+                                <grid>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <widget class="QLayoutWidget" row="1" column="0">
+                                        <property name="name">
+                                            <cstring>layout54</cstring>
+                                        </property>
+                                        <hbox>
+                                            <property name="name">
+                                                <cstring>unnamed</cstring>
+                                            </property>
+                                            <widget class="QPushButton">
+                                                <property name="name">
+                                                    <cstring>MeasureMonitorButton</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Enter monitor values &gt;&gt;</string>
+                                                </property>
+                                                <property name="toolTip" stdset="0">
+                                                    <string>Start dialog to set parameters to be used for profiling monitor.</string>
+                                                </property>
+                                                <property name="whatsThis" stdset="0">
+                                                    <string>Start dialog to set parameters to be used for profiling monitor.</string>
+                                                </property>
+                                            </widget>
+                                            <spacer>
+                                                <property name="name">
+                                                    <cstring>spacer19</cstring>
+                                                </property>
+                                                <property name="orientation">
+                                                    <enum>Horizontal</enum>
+                                                </property>
+                                                <property name="sizeType">
+                                                    <enum>Expanding</enum>
+                                                </property>
+                                                <property name="sizeHint">
+                                                    <size>
+                                                        <width>16</width>
+                                                        <height>20</height>
+                                                    </size>
+                                                </property>
+                                            </spacer>
+                                        </hbox>
+                                    </widget>
+                                    <widget class="QLabel" row="0" column="0">
+                                        <property name="name">
+                                            <cstring>NoHardwareLabel</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>7</hsizetype>
+                                                <vsizetype>1</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>459</width>
+                                                <height>0</height>
+                                            </size>
+                                        </property>
+                                        <property name="maximumSize">
+                                            <size>
+                                                <width>32767</width>
+                                                <height>50</height>
+                                            </size>
+                                        </property>
+                                        <property name="text">
+                                            <string>No special hardware is required by using this method.</string>
+                                        </property>
+                                        <property name="alignment">
+                                            <set>WordBreak|AlignVCenter|AlignRight</set>
+                                        </property>
+                                        <property name="hAlign" stdset="0">
+                                        </property>
+                                        <property name="wordwrap" stdset="0">
+                                        </property>
+                                    </widget>
+                                </grid>
+                            </widget>
+                            <spacer row="2" column="2">
+                                <property name="name">
+                                    <cstring>spacer64</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Preferred</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>20</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                            <widget class="QRadioButton" row="4" column="0" rowspan="1" colspan="4">
+                                <property name="name">
+                                    <cstring>RadioAccurate</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>I want to build accurate profile from measurement sheet</string>
+                                </property>
+                                <property name="toolTip" stdset="0">
+                                    <string>Create monitor profile from measurements taken with a color meter.</string>
+                                </property>
+                                <property name="whatsThis" stdset="0">
+                                    <string>Create monitor profile from measurements taken with a color meter.</string>
+                                </property>
+                            </widget>
+                        </grid>
+                    </widget>
+                </grid>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>TabPage</cstring>
+                </property>
+                <attribute name="title">
+                    <string>Preferences</string>
+                </attribute>
+                <grid>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <widget class="QButtonGroup" row="9" column="0" rowspan="1" colspan="3">
+                        <property name="name">
+                            <cstring>ButtonGroup2</cstring>
+                        </property>
+                        <property name="title">
+                            <string>Output colorspace</string>
+                        </property>
+                        <property name="toolTip" stdset="0">
+                            <string>Set what type of measurement file is created by the pick tool.</string>
+                        </property>
+                        <property name="whatsThis" stdset="0">
+                            <string>Set what type of measurement file is created by the pick tool.  In most cases use RGB.</string>
+                        </property>
+                        <vbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <property name="margin">
+                                <number>11</number>
+                            </property>
+                            <property name="spacing">
+                                <number>6</number>
+                            </property>
+                            <widget class="QRadioButton">
+                                <property name="name">
+                                    <cstring>RadioButtonRGB</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>&amp;RGB - Pick from image</string>
+                                </property>
+                                <property name="accel">
+                                    <string>Alt+R</string>
+                                </property>
+                                <property name="checked">
+                                    <bool>true</bool>
+                                </property>
+                                <property name="toolTip" stdset="0">
+                                    <string>Pick RGB values directly from the image.  This is the default setting for most profiling operations.</string>
+                                </property>
+                                <property name="whatsThis" stdset="0">
+                                    <string>Pick RGB values directly from the image.  This is the default setting for most profiling operations.</string>
+                                </property>
+                            </widget>
+                            <widget class="QRadioButton">
+                                <property name="name">
+                                    <cstring>RadioButtonLab</cstring>
+                                </property>
+                                <property name="enabled">
+                                    <bool>true</bool>
+                                </property>
+                                <property name="text">
+                                    <string>&amp;Lab - Pick form image and apply input profile</string>
+                                </property>
+                                <property name="accel">
+                                    <string>Alt+L</string>
+                                </property>
+                                <property name="toolTip" stdset="0">
+                                    <string>Pick Lab values and apply the input profile.</string>
+                                </property>
+                                <property name="whatsThis" stdset="0">
+                                    <string>Pick Lab values and apply the input profile.</string>
+                                </property>
+                            </widget>
+                            <widget class="QRadioButton">
+                                <property name="name">
+                                    <cstring>RadioButtonXYZ</cstring>
+                                </property>
+                                <property name="enabled">
+                                    <bool>true</bool>
+                                </property>
+                                <property name="text">
+                                    <string>&amp;XYZ - Pick from image and apply input profile</string>
+                                </property>
+                                <property name="accel">
+                                    <string>Alt+X</string>
+                                </property>
+                                <property name="toolTip" stdset="0">
+                                    <string>Pick XYZ values and apply the input profile.</string>
+                                </property>
+                                <property name="whatsThis" stdset="0">
+                                    <string>Pick XYZ values and apply the input profile.</string>
+                                </property>
+                            </widget>
+                            <widget class="QRadioButton">
+                                <property name="name">
+                                    <cstring>RadioButtonLabXYZ</cstring>
+                                </property>
+                                <property name="enabled">
+                                    <bool>true</bool>
+                                </property>
+                                <property name="text">
+                                    <string>Lab&amp;+XYZ - Pick from image, apply profile, convert (D50)</string>
+                                </property>
+                                <property name="accel">
+                                    <string>Alt++</string>
+                                </property>
+                                <property name="toolTip" stdset="0">
+                                    <string>Lab + XYZ - Pick from image, apply profile, convert (D50)</string>
+                                </property>
+                                <property name="whatsThis" stdset="0">
+                                    <string>Lab + XYZ - Pick from image, apply profile, convert (D50)</string>
+                                </property>
+                            </widget>
+                        </vbox>
+                    </widget>
+                    <spacer row="0" column="1">
+                        <property name="name">
+                            <cstring>spacer15</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>70</height>
+                            </size>
+                        </property>
+                    </spacer>
+                    <spacer row="2" column="1">
+                        <property name="name">
+                            <cstring>Spacer15</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>69</height>
+                            </size>
+                        </property>
+                    </spacer>
+                    <widget class="QLayoutWidget" row="3" column="0" rowspan="1" colspan="3">
+                        <property name="name">
+                            <cstring>layout13</cstring>
+                        </property>
+                        <hbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="ICCProfileSelector">
+                                <property name="name">
+                                    <cstring>InputProfileSelector</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>3</hsizetype>
+                                        <vsizetype>5</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>38</height>
+                                    </size>
+                                </property>
+                                <property name="FileMask" stdset="0">
+                                    <string>*.icc;*.icm;*.ICC;*.ICM</string>
+                                </property>
+                                <property name="Prompt" stdset="0">
+                                    <string>Input profile</string>
+                                </property>
+                                <property name="toolTip" stdset="0">
+                                    <string>The input profile (used for softproofing)</string>
+                                </property>
+                                <property name="whatsThis" stdset="0">
+                                    <string>The input profile (used for softproofing)</string>
+                                </property>
+                            </widget>
+                            <spacer>
+                                <property name="name">
+                                    <cstring>spacer14_2</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Minimum</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>20</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                        </hbox>
+                    </widget>
+                    <widget class="QLayoutWidget" row="1" column="0" rowspan="1" colspan="3">
+                        <property name="name">
+                            <cstring>layout12</cstring>
+                        </property>
+                        <hbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="ICCProfileSelector">
+                                <property name="name">
+                                    <cstring>MonitorProfileSelector</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>3</hsizetype>
+                                        <vsizetype>5</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>38</height>
+                                    </size>
+                                </property>
+                                <property name="FileMask" stdset="0">
+                                    <string>*.icc; *.icm; *.ICC; *.ICM</string>
+                                </property>
+                                <property name="Prompt" stdset="0">
+                                    <string>Monitor profile</string>
+                                </property>
+                                <property name="toolTip" stdset="0">
+                                    <string>The monitor profile (used for softproofing)</string>
+                                </property>
+                                <property name="whatsThis" stdset="0">
+                                    <string>The monitor profile (used for softproofing)</string>
+                                    <comment>This is also passed to the profile checker tool.</comment>
+                                </property>
+                            </widget>
+                            <spacer>
+                                <property name="name">
+                                    <cstring>spacer14</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Minimum</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>20</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                        </hbox>
+                    </widget>
+                    <widget class="QLayoutWidget" row="10" column="0" rowspan="1" colspan="3">
+                        <property name="name">
+                            <cstring>layout41</cstring>
+                        </property>
+                        <hbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <widget class="QLayoutWidget">
+                                <property name="name">
+                                    <cstring>layout11</cstring>
+                                </property>
+                                <hbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <spacer>
+                                        <property name="name">
+                                            <cstring>spacer13</cstring>
+                                        </property>
+                                        <property name="orientation">
+                                            <enum>Horizontal</enum>
+                                        </property>
+                                        <property name="sizeType">
+                                            <enum>Preferred</enum>
+                                        </property>
+                                        <property name="sizeHint">
+                                            <size>
+                                                <width>50</width>
+                                                <height>20</height>
+                                            </size>
+                                        </property>
+                                    </spacer>
+                                    <widget class="QPushButton">
+                                        <property name="name">
+                                            <cstring>pushButtonHelp_3</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>4</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>50</width>
+                                                <height>0</height>
+                                            </size>
+                                        </property>
+                                        <property name="text">
+                                            <string>Help</string>
+                                        </property>
+                                    </widget>
+                                </hbox>
+                            </widget>
+                            <spacer>
+                                <property name="name">
+                                    <cstring>spacer59</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Maximum</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>20</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                        </hbox>
+                    </widget>
+                    <spacer row="4" column="1">
+                        <property name="name">
+                            <cstring>Spacer16</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>70</height>
+                            </size>
+                        </property>
+                    </spacer>
+                    <spacer row="6" column="0">
+                        <property name="name">
+                            <cstring>spacer23_2</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                    </spacer>
+                    <widget class="QLayoutWidget" row="5" column="0" rowspan="1" colspan="3">
+                        <property name="name">
+                            <cstring>layout17</cstring>
+                        </property>
+                        <hbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <spacer>
+                                <property name="name">
+                                    <cstring>spacer20</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Fixed</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>10</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                            <widget class="QCheckBox">
+                                <property name="name">
+                                    <cstring>ProofToggle</cstring>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>50</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>Color Manage display</string>
+                                </property>
+                                <property name="toolTip" stdset="0">
+                                    <string>Use to enable soft proofing.</string>
+                                </property>
+                                <property name="whatsThis" stdset="0">
+                                    <string>To enable soft proofing.</string>
+                                </property>
+                            </widget>
+                            <spacer>
+                                <property name="name">
+                                    <cstring>spacer21</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Fixed</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>10</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                            <widget class="QLabel">
+                                <property name="name">
+                                    <cstring>TextLabel1_2</cstring>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>0</width>
+                                        <height>50</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>Safe &amp;frame (%):</string>
+                                </property>
+                                <property name="alignment">
+                                    <set>AlignVCenter|AlignRight</set>
+                                </property>
+                                <property name="buddy" stdset="0">
+                                    <cstring>SafeFrame</cstring>
+                                </property>
+                                <property name="hAlign" stdset="0">
+                                </property>
+                                <property name="toolTip" stdset="0">
+                                    <string>The safe zone on patch picker</string>
+                                </property>
+                                <property name="vAlign" stdset="0">
+                                </property>
+                                <property name="whatsThis" stdset="0">
+                                    <string>The safe zone on patch picker</string>
+                                </property>
+                            </widget>
+                            <widget class="QSpinBox">
+                                <property name="name">
+                                    <cstring>SafeFrame</cstring>
+                                </property>
+                                <property name="maxValue">
+                                    <number>75</number>
+                                </property>
+                                <property name="minValue">
+                                    <number>50</number>
+                                </property>
+                                <property name="lineStep">
+                                    <number>5</number>
+                                </property>
+                                <property name="value">
+                                    <number>65</number>
+                                </property>
+                                <property name="toolTip" stdset="0">
+                                    <string>The safe zone on patch picker</string>
+                                </property>
+                                <property name="whatsThis" stdset="0">
+                                    <string>The safe zone on patch picker</string>
+                                </property>
+                            </widget>
+                            <spacer>
+                                <property name="name">
+                                    <cstring>spacer22_2</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>10</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                        </hbox>
+                    </widget>
+                    <spacer row="8" column="2">
+                        <property name="name">
+                            <cstring>Spacer11</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                    </spacer>
+                    <widget class="QLayoutWidget" row="7" column="0" rowspan="1" colspan="3">
+                        <property name="name">
+                            <cstring>layout18</cstring>
+                        </property>
+                        <hbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <spacer>
+                                <property name="name">
+                                    <cstring>spacer24</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Fixed</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>60</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                            <widget class="QPushButton">
+                                <property name="name">
+                                    <cstring>Reference_install</cstring>
+                                </property>
+                                <property name="minimumSize">
+                                    <size>
+                                        <width>200</width>
+                                        <height>0</height>
+                                    </size>
+                                </property>
+                                <property name="text">
+                                    <string>Install Reference File</string>
+                                </property>
+                                <property name="toolTip" stdset="0">
+                                    <string>Press this to bring up the Reference File Installer dialog.</string>
+                                </property>
+                                <property name="whatsThis" stdset="0">
+                                    <string>Press this to bring up the Reference File Installer dialog.</string>
+                                </property>
+                            </widget>
+                            <spacer>
+                                <property name="name">
+                                    <cstring>spacer25</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>40</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                        </hbox>
+                    </widget>
+                </grid>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>Printer_Tab</cstring>
+                </property>
+                <attribute name="title">
+                    <string>Printer Profiler</string>
+                </attribute>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>textLabel1</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>200</x>
+                            <y>230</y>
+                            <width>181</width>
+                            <height>23</height>
+                        </rect>
+                    </property>
+                    <property name="text">
+                        <string>Not yet implemented.</string>
+                    </property>
+                </widget>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>Hidden</cstring>
+                </property>
+                <attribute name="title">
+                    <string>Hidden</string>
+                </attribute>
+                <widget class="IT8Selector">
+                    <property name="name">
+                        <cstring>SelectTemplate</cstring>
+                    </property>
+                    <property name="geometry">
+                        <rect>
+                            <x>10</x>
+                            <y>10</y>
+                            <width>500</width>
+                            <height>25</height>
+                        </rect>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>1</hsizetype>
+                            <vsizetype>5</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                        <size>
+                            <width>500</width>
+                            <height>25</height>
+                        </size>
+                    </property>
+                    <property name="maximumSize">
+                        <size>
+                            <width>32000</width>
+                            <height>35</height>
+                        </size>
+                    </property>
+                    <property name="Dir" stdset="0">
+                        <string>template</string>
+                    </property>
+                    <property name="FileMask" stdset="0">
+                        <string>*.itx;*.ITX</string>
+                    </property>
+                    <property name="Prompt" stdset="0">
+                        <string>Pick template</string>
+                    </property>
+                    <property name="lUseDescriptor" stdset="0">
+                        <number>1</number>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Select a picker template for your target.</string>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>Select a picker template for your target.</string>
+                    </property>
+                </widget>
+            </widget>
+        </widget>
+    </grid>
+</widget>
+<customwidgets>
+    <customwidget>
+        <class>ICCProfileSelector</class>
+        <header location="global">qtlcmswidgets.h</header>
+        <sizehint>
+            <width>160</width>
+            <height>24</height>
+        </sizehint>
+        <container>0</container>
+        <sizepolicy>
+            <hordata>1</hordata>
+            <verdata>5</verdata>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+        </sizepolicy>
+        <pixmap>image2</pixmap>
+        <slot access="public" specifier="">slotButtonClicked()</slot>
+        <property type="String">FileMask</property>
+        <property type="String">Prompt</property>
+        <property type="String">Dir</property>
+    </customwidget>
+    <customwidget>
+        <class>IT8FileSelector</class>
+        <header location="global">qtlcmswidgets.h</header>
+        <sizehint>
+            <width>160</width>
+            <height>24</height>
+        </sizehint>
+        <container>0</container>
+        <sizepolicy>
+            <hordata>1</hordata>
+            <verdata>5</verdata>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+        </sizepolicy>
+        <pixmap>image2</pixmap>
+        <slot access="public" specifier="">slotButtonClicked()</slot>
+        <property type="String">Dir</property>
+        <property type="String">FileMask</property>
+        <property type="String">Prompt</property>
+    </customwidget>
+    <customwidget>
+        <class>IT8Selector</class>
+        <header location="global">qtlcmswidgets.h</header>
+        <sizehint>
+            <width>160</width>
+            <height>24</height>
+        </sizehint>
+        <container>0</container>
+        <sizepolicy>
+            <hordata>1</hordata>
+            <verdata>5</verdata>
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+        </sizepolicy>
+        <pixmap>image3</pixmap>
+        <signal>valueChanged()</signal>
+        <slot access="public" specifier="">slotButtonClicked()</slot>
+        <property type="String">Dir</property>
+        <property type="String">FileMask</property>
+        <property type="String">Prompt</property>
+        <property type="Int">lUseDescriptor</property>
+        <property type="Bool">showFileDialog</property>
+    </customwidget>
+</customwidgets>
+<images>
+    <image name="image0">
+        <data format="XPM.GZ" length="12444">789ced96596f224710c7dffd29d0d6db2aaa65801940511e7c5fd8c617c68ef250cc818d8d2fc0c68ef2ddd374fdab2d45d99748796bad66343fd5f9efeaf2f2e37b6dd83faa7dffb1369bcbfc2eafe5b7f25afb5e2ca6d38fdffff8edcfb56f49bd596ba5b5a4d3aa35befdb2f68dee6b798deaf5341db5562c237057991e3c778c998cf3c2fbaf830bd84781bd9da6c6ea7f3a57ce12651670aa4c8f2b4eea59a2f15c18c3bf02a7b0e760f4434f9e3bc17e6b0cfb0bb8ab76d93086fdd9b8487d7c0946ff921bc33e566e27e0c98a1bf590bf30563bcdc0381fa98c51ffd518f9ee942d3f2d3c7743fca671aefe0fc6f07f536e27b03f06d67a7363f597129ca2fe146cfdbfafb899b453cd27b781f5bc9f8d11ff0ab6fb32069b3e7fff9aa11e7d80bb9a9f96c6e86f2b70e9ed9f60e897fbc0dacfdc58fdf945b99328cb049cc2eeef4f2b317fd956eee0fc6823b0e67f33467f0f81357e0a367deb81d5eee7db12f3a74db09de7cc18f66d30ce933f8c719e8bc0eabf05363d7efe6923f8af0756ff5db09ddfa631f4ed04d67cf0ef5aff3bc665e6e3fd7d49bfea3f19ab9df695bb384fd933467fcbc03a9f6d63c49b7f8a7afe3e64a13e1d82ed3eee06d67e9e8de17f00ee229f9f7716f2530f6cf7f135b0f6b7650cff63b0ddf783c05a7f660cff2365b1f3f3e7d96e067b5f59ecbecd036bfd9e71a9f90fc029d8dffff628e4df0bacf61ed8eeeb6960cdbf6facfe740e16d84f8c91ef4879d400fbf84ee88f4ec0c8c78760c4d325b8c479a93de4e7237009ff81f2a8817e8e8d517f615ce9795e8033c49fadb8db327f1a8233e4eb1ba3fe85b1e69363b0f57f052ed5cefe3cbb79f03f010be67b1d58f39f19a3df3ab8547fe90756ff2b63d4f3f391505f4e95f306ea258135fe1a8cfed89fbfe4b99d57039ca1fe59608d1f18a3de39d8f4358d91dff29555e5ed372b1e7dd5af83cd7f1858fd5b60e8970b63d47f0fecfd65a95c349459eb15c17ea95cd8fc5363d44f026bfd0c0cfd323046fdcfc09adfff7f91a7162f5760bb7f6d63d46b06567ffff73e0ff5b905869d3a60bb3f6d63c40fc1381fea06d67c5e6f919a3f67603b1f562eed3e5060f5f7f98a32e4eb289b5daec1d0471c58ed04c6bce526b0eaf3bf2fcbccfc49c0a6af0e367dfef757f9159f834d8fc69795f597802dbfff3de4c8e65d81cdee7fff5455b0df81cd3e065bfd09b8523e9d33b1f088732eb8e48ac77ccb773ce17b7ee0293ff2133ff30bbff28ce7bce0377e775f4bfee04f5ee70ddee42ddee61ddee53df7b5cf077cc83d3e725fc77cc27d47a78ece1c9df3055fbaaf015ff190aff986eb9c70839beedd724feade19b7b9c35d6222121a514e0595ee5db9f7986edd734713f79efcec9f5778efc21f68ea3415f4c8b7f444cff442af34a3392ddcf3c6cff44e4bfae027faa475dae0056dd2166dd30eedd21eedf306edd3011df20ef5e8888ee984fa7c42a77446e774414e050de88a067c4e43bea46bbaa13ad729e11b6a70424d6e528bdb947246997b9c26ea38355d1261a786a914729a721a8bb8ae2b3cffaa4b67242316a728a747c9dd7cc64ed35cdc8a49e574cc652cb772474b99c83dafcb03bfcbd44d65c19ff2c81bf2e426b3e41d79961779e57d99f1a1ccc38c2e6c46b2f8c78c064e4f53dee49d9bb2e4967c705b3edd8c5237a38c464e95d04a4fe154fcc719c9bacd48366c46b26933922d37a3f96a46b2bd9a91ecd0b6ecea8c684fdc8da34399514ff6e9580ea82f87d293233ae73e5dcab19f8f7bdc2dbc94131e489f8772ca3772e6349d3b4d174ecf257565c0995c394d6d1ac9d06922cae5dacde8862aa93b25254d24719dff5457dca3b847718fe21ec53d8a7b14f728ee51dca3b847718fe21ec53d8a7b14f728ee51dca3b847718fe21ec53d8a7b14f728ee51dca3b847718fe21ec53d8a7b14f728ee51dca3ff7d8ffefa75ed6f7bef7e27</data>
+    </image>
+    <image name="image1">
+        <data format="XPM.GZ" length="18561">789ce59a5953234992c7dffb539475bc8dadc5e896d2d6f68143e2be2440c0da3ec49d022184900031b6df7d3dd3ff9e05d5d53d635b4cf5ac6d9755977ef238fc08f788c8d45ffff2e5eaf4e8cb5ffefacbd3d22c27ee8bcbcde2cb5ffceafe7efd9ffff51f7ffbe5d7acf7a5d5fad2a975bf347efdb75f7ed58f5fdc17552bff2bb90f6e31ab3b708fd9ec96dc2bbe29e513708b59bf817b909f821de4dbcc75e9bf2898c8d579fe0de6e24f39df33b8059e974cfdeb3cde18dc625667e01ed8811db3b9666e48ffe3820b6af0fc73b0032f988b3fe57811dc624e8139cb1a59c17e47b8592ff906ec591ecf8459ee66cca6cef2702eccf2745371294f226fb3dc623c63b8bfbd0407667d5b7246fa32ef827bccc6811dfa0f99457f775931cfbf048bfe1715977207b9e8ef2f2a66fb4ec0ed16db17c1d0df3d0963fcfb8ad97f5be000ffac986d835995eba1596fb498f535b8076e831db331cccd1afae760f40f682ff6c74db0d83b14667b7c64167bfdad30e41edc863c80615f82be641fcb37853ba6945f305bc855a3e48cf4653e06f79875003be87fc29c65ac8f3d058b3d67c288cf63c5e5fcfe8a59ec890fe036cbc388d936d0bf0f86fe4a17dcaa376a2cd78eb9e9e09f5d66d1cf5f33d37c3c7e5fb85dd62ff70036909f0ab3dc9f8303cba365b686c77753616eaf4afd5ba6dee3f6fa8599f465fd593fd3145e31b7c07a066e41aec0184f75c00efa2c99330f7b16cca2bf853e2630a79a70b759f66f30db06facfc1e81f3d58fa8f2a667d7b05b71bcd16cbb507f7e08f7de616e4660686dc9c811ddabf32b76bf07f8d99e2c5f159820d737c02433f3bae98d7db84b9b26701865cb1bea6d1035f30376be03533e9c7f6b2bea60db9b907b7218fe00cbc07f6ccb6c1dcf53196faac987b75660736a653ea1ba00fc5cb96fe37ccb6c1727b0e46fb78c3ec3ac89772fe4ea39db15c6d823db3be62eed4315f62167d620e6e33fb2638036f309b3acf17ea60e46b7c64b60d5e6fc983a19f1f804dafb4cf633ec9f704fdc51ebb021bf02b18ebd994f5b4639a2dd82fecc073e60ef4b51adc66367d70063e067be873c82cf173682ffeb13530fc135ec1681fd87eca57cccffe2fe2cdfe1b80614fb0cce22f7b0116798359fc91e6c22cb72fc259ab6491a3bf2ef5ed36db1efe5b3177daccaa0bced0fe0e8cf6b6c35caddf1618fe706b30fc6133b0f8ef863943ffb0c15cd97fc62cebc7f7c11de4c3000c7be361c5a53c1c318b3f74791eec5ab2af94ab2770067e63eed6c1db60b4cfd97e2bf6e50f60d8e75ec0b02f4fcc19c67335619627cb6c307e427b137a6cff16b36d8015d830db4766d7e0fef64198e5be07ee30c76b7040bec13e8ffeaad4af47f1e6f6ea04ec99cd2d73b70ef93d18edcd1118ed73c8abf5d001fbd829f5ad57ccfe786526ff9472d7ae98d74f0b2cfeb760cce7c6cc06f52429660bfbfd100c79dc008bbf1f2b667f3e338b3fa3aa98fde7c01de6700c36992bfd735032ad2796ab29b8cdacebe00c6cc19ed9ec31f7d05edd82d1de3f3067751f4a7dbbc2f0e70e18fd5d5d18feec81253f37c152af726623e38dc1f04fc0fc9440657d896f60d49bd064a6eb01d79f3518ed1dfbdb7a634b36256774fc61b93a64ee66cc7a13ec217f60eed5990ddaf7d0decf84597f3d01a3bf7b15867c873993f112b88df60de150aecf1ce357fe6b82657fdf6636182fcf2b2ed787bf0307e6f4cc6c1be04b66f157d8acb894c77b30fc9d86159772bb0007f4877f3cfadbf23c91b9761beb95fdef3a1e7cc3dc853cee3157fe3a61ce608fdb1666b96a81d1df787086f16a606f385e47c2587f6cbf93f51747e0007987d976b87fc078d5fa33c218ff8d59fc13e6e0c0f204fd7d30ac6fe93fd3eab459ae7a60e86b6e987be0306616fb4d0e467ff306ce98f35b61aca7a930ec6d83653d0d994d1df61c83dbce97dc1646be427f03fbf309b36db07d691f0cffd96d61cc3707c33ffeb2625ebf19b36bc07ee8ef31be2aeb2b1d473d73fec42cf1d7a7c22c0f2fc2385fb27e55fc1dc6237bdba53f456e60cf01b36d607ddc83a16fc0fc0efac52361ae3f6906ee300707467db227cc1eed1df4f7686fd15fea59647fb880f6a6ac57b6d5c9c06de6ae0707e65e1df3df82713e313561b47f65ced05e35c16de8f706863fcd142cf30d980dfa275771b99ed43918e3d9b630c6db01c3defcb1e2b2bf5e8303e49b1597f2742b8cf576c12cf1535b6089c7ae30e2bb0263feb0278cf5d30063fc3c324b7cfda8e2529f30044bfc0c7315cf5871d9de95ebdffa2eee4fba0bf62c3707ccbd36781b2cf23a7306b97e6216ff9b1618f2d41486ff1b60e8137684b91ee42b30fc6f9e2ae6f93acc16f6db2d30fc971b70e07cb31bc290f37af1943f3cff9530e2a3c132fe9b30e283f99cf8f30e0cfd22c6f71d9e3faec1909bb2bf6bf73296ab36d833a716b3d44f3760967a622ec106edd15ffca131be853c9e8231bfca8459ee362be6fe47ccaec1f27c43d897ecf78451af5fc0e29f04c6fcfe5e18f233e680f1ed53c5eccfb23e3adf95fb1bfbc36775961b0dcec017600f667d693d623dcd85f9bca99660ec3fe9086cf8fc6e4ec0f0473a6696fd47633edb81bc03967ab21666793c004bfccf85a1df33b383fdf99630fb3b7f1366fd62a762ae3fd21ffe579760ccef4660cc178330fb23d599bde1f9e28c59e211afc090fb323f3d1dbff03cf39e396bb3dc5c813db3021bc89d30c6331d66db61d6092cf33d09c3de263840be1086bcce2cfe4bbb1597f67a0d36580f068cf14214c6f9f886d94b7d7806c3df79004bff6de6007bec7dc5e57ce10d0cfb1cdb1b7ab86f9b2eb3ac572f2cf78d8930cbcd188c782a8c6761afda01637ed304a3bf1e80d13ff48491afeccf20fe735b60d86f5ec0a20ffa7bb4d70d30e6b70a8cf6b1c51ca49e5c81a18f3b678e0d3e6ffa71c56c5fe9ffd0c93ccbcd88d9e0bea32fc106fd9fc118dfdc315b8caf5fc11d66d704c31ffa80d9a1bdb160691f2a66fb1fc032ffa130f2f5081cd0ffb9628ec782d963bed41086bf30bec7fc71228cf8413f8ff9551d8cf992b497fd5131d382e2f557d6c31032d4cb9cf50994cf1c1ff607ad376e6f4ec1e81fd6c2a8af1918f6b94361966bb0c3787a1f0c7fba1d61d87f06463ee5afc2984f81319f9f0ba39e762be6fad167f6983f0430e6b72297f5bf04c3defc4598c7f7ad8a39de2297f8ce84b9bde278513e40df4761d4a36b30f489e7c2d07f178cf9e331b3e44b1c08633ce81f315e7a02c39e54e673ecb4e57de135b3c42b5f324b3ee81b61f87f0deee0f9d82d18f1527d61c4bf0996f590317b8c17ba60d9ef9ec1e2ef2958eab7650ed2bf5531c76f130cfde20e58f69b04863eeeba62de0fee9823fae7be6296b33f6213bf2f707b60fcbec07ee5f2fdbc336007f961c52cef09f3ef039c626ee1f70376178cdf0fb86ec5dc3f17c6fb670bee717bbfacb86c1fc7c2fcfe3fde82317fbcab98dbbf08a3fd2b731bbf27b0a9627efffb26ccef07d38930bfff0a19b80d7d615f1befeb6d64eec8fb67258cf7bd47e036dea7ed83f1fb043711c6fc77c2787f077917e3bb6361bcbfd802e37db03b12c6fbc74c98ef5bce81f1be261c08e379c43518efa7e3a530f74f1bcc745ee0f753a760bc0fb2b9309eff6930e6b3fbc2787e2c2cef47762ae6e7d15d613c9f34c2789e82f8caf3471b84d99e88f52acf73ed8130c6e3fa10e5f9509a82f1fc2ddd0be3bcd701e3f9a39d08633ef85bceebd683f1bcc89f0ae3bcae8571fe054b3d4bd0afba0fde09e37ced85b1bf1f08a3fe20de52ef522e0c39ec75b88ff91761eca75118ed07cc1ef7d7a485b13f4661d4cf51c5dc1feb57f63377228cfd675631efaf9b60ec07fa5c18e3a11ec8fea58715f37909eb45eaad82feb25fe91518e369f843eaab86bf64bfd2a84f525f35f23da2ff99c8a3f0fffd3fffffecd0eacfd6f51fb5432b6db4d54e7b1d74d449e7efac98e85b7df7fe9b6fac9cea7b3da336f1cfb7a3d4e741cff5a35ee827fdfedb957ea66f5ff4ebef8fa4d7fa4d6fe84d3dfd97b0634b6feb3ec564f0711de91dbdabf7285ee5b77a5f1f5492437d847ffbfa589ffc19567c6b87cef52969f3a6cff4f0db7cd0237dae87e5a70bb2e91c165dea31474e5f51c4aef58d5efd0bd8b1d435d266aeebda7c6345431fe86699072d92b775a75c6d5db2b9a7b3e2b3d2fa4d29f5ae1ff5c894fd53ec1829a71f9557e16b76508c9ec8ff6f2aea079554ae2664695f3fab5bca97beeeab3b35a536e7f4ed86bad7655d5333f5a0e6ea512dd413c7f067daa1955a92be13b552cfef57957a51aff4ed9a7226576f7a4c9f3728ab876a93a2d1d75db5456d8aac5aa8be1ad0e71db5abf6d4806adc86da57b39f1f0f75507af5f0e3aa5247ea98a2b44959be5227ea549d51d6afb451438ac6489d533486ea82ac3b5697d4baaf77d5585da96b75435ea9fd7c3b545d35c8abb7aaa93fb4512d5a6d1baa4db93fd5ae8817adbf01ada039d9d1218b56f47d9fd650b7b4a847519aa9cc68aadea1b4f227eca0efed308aeaffa331c6be9f99d6d2a19a183afc9245e7a4db239dd369b733499dd267ca0cfafe96e23836138ad133597c4ae97e4b31dc347714c3dfdd3bff6976945e35f7eab9b24115ebc7cc48cb3335d3b9793073d2b355e6d22bf97dacd74595338f94fd6d55d4ad097d3a360bf3a4a7a6a86e3f6957fc6a875e9995ee9b67ca58cc6d5e280f72e3d5993a35af66ad068545ea98e236250b77c93a47fea6d6d46b42f60ff4c8046a11cd1bb55815b1fc39567cb0c39427925bb3516ab669b674cf6cab817a24bfcf4ddf5833a07da3af7aea8122b0a3ceccaeee9a3d6abb4f31d83007e6500fcd117d1e9b63f5a2953931a73f3b1ea4ef66b12fd09a9fa9437346319898a119d1babaa31de2543f9b73da3dc6a5a51714994b5a5f13bd6bc614b1abb26783b2614a3b1fed40facd5c13df1455f8e7da416b686006a6666ee8b6de304dd3329a7c3e282a90b6a66d3a941103d3555d73657a85ddb4af5f99aca8aa94415b56eb03ab8afdde44b3b2c5b939b3b6c89d9f6b0772fa9c56175598b2920ee9ff79f97d4e67ab69a1515963477c17214b5645dd2a3e173b8b7c4fada7b6c89be1cfbcb3fc23f7a80f55f8fdf7f9c7cf45bbe2edb88d36d1dfdc4e746e6fed9da51cb1f776661fecdc3eda05fdfbf43d0bedd2aeecb37d21f9ab5ddbfbf76dec9bddb09b76cb6e17fe2be6b3fdf727d2cfbbd7da81ddb1bb768f6cd8a74f0764c961f9e7c81e739cec893db567766847f6fc7bebcd5e90ec92fe8eed95bd960aa195bdb1355bb70ddbb42d5bbc65ef12f76cf6dececfb2c3d146ef8cb3ce394f779873175c74c9e5f6d04ddc2ddadcb9a9bb7733f7e0e6aafe9b111edd82644f6ee9562a73cfb80d281aebc5bdbab57b731b46b94db765eb6edbf5ddc0ed7cae1d7ae976dd9edbb3bb6edf1db8c322bf8a5cb2b7ee88ec387627ac933b7567140bf2b91bbad1c795e5cedd45112bb2e5d28ddd9544c35dbb1b57b30d57770d178b5b11d9d574ade2d70772abfb1c3b74eebaa4ed9eebb94c1f7afd4ea2acf3ca1b8f3b88776e6ec7defbe0a34f1f47f1b99f14b1b0237febef7cb5ebf87b3f736b5bf30f7e2e55dc3ffa85ebfba7a2b27c9e1d7e59c4828e5f2bff5cdcb43ec85efcab5f6385e4fecd6ff8cd323f867eeb7d3cfcb6effb01d9b063cffcaeca2483f5d2ef512c281e7edf1fbc6b7fe88ffcf1fb997ed40e5afd6403c5a3eb4ff89efe3156fe94b2bcf4ae3ff3433fb22337f3e7fec25f7ecd743ff657ead25fbb85bfa158d5fcbbdcf10ddfa4dc787535dffa60799bf6887767851fb3c377ca15b567f7dcb1ef7ebf8dcce67b3e0b7490e79a14cc572d42f1c39124b5aa788d58f555218654e6472de4efeea8c509f4fcb3e241b34ca8ae16ab4a85dbe246f2fb6dc35d9886fb30a3f5137d70cbf020768479780c8b50d429fa1b9661f5fe16179ec38b5b87575b73dbbef15bef7c861d6a4015ca94f14861fdc7f7f0f01636d4a53601f911b6386bc376e82ba366b4fff1f783b0f3d11f61d7b539475c3decfddef83f6247d8a73da3cc8e70f0dbdcf8a6ed6138323d8ae0713809a7e4f7335b5631370f434d791d46e1dc2dc279b8a05bc1fbf3039d96c225d5ac1665493f8cc3d53fc18eeb221ae186ecb8fd7b370d7b126ac5cab3331fcbfca817eb3b3442538f424b4fdda2c88fd00e9d8febbec885d0a5dda2c631b1add0fb743b32ce71bb1bf5b7cfbbbe6979175558142b299a68290f6676ac66d1451f43f1442f464bf1a05a75a53bbf7d8e1793edd33e483962b398879738f94c3bf434de1676849b7867c67fdc364ee33defe071161f8a3c704f711e1fcd4b5814918c8b622f8f4f71e9ebdfab167aea0fe974d22ee21157f1f9b7b7b31f89477c29e371185f8b27297fd8721ddf8abb4c91d7d1bb077fe1eebd8f1b26721ce366dca2dc58c6edd8478f41fc90ef71b7b024eed1b98ace29c5bdfad3e2b18cfbe54ebe175fe2c11fb78d87f1081a1f53348a7d62144fe2293fdb22dbce10a3a1ac4f5a6ba378fe7e0c3588177155d6aeefd4ad1f8ac765b10b523cc6b4c6bf93e7e2cf7815af83e627a664fd4d911f6e116b116b28ccfd4d6c50bd7a884d896b6cc576ec7c1c2f5cd99e6f524c5ab1fb6d16fd881df698ce86a6b4e43b3524660967467f9694a96e5dc914b529d9e42ccef3c9a790227d9752f5cc2e4de22aec7e5cad7a483952ee23e9f633e3a157eeb8d8cfed61bafb76174cd3742f5ad8759aa5874a32778bf49816b1cf3aa7273b4ecbb472cbf4fc7594f4e29be4fdd6c77850adca6d965e43f733f7739a6d9dde38d7d386e8a055da4c5bb157d4d362dda4edd44fea6b66a641dc4a3ba9f275dae37c09edb42f27733d4d07e4f7b66d7d5d3f6a900e8afc4887e928fd6615ffe879371da7135bec2174c6f22a9dba8957218bbd74563c6f20f9308dd279ba48979557a769ac135b9daee84eb24cd789ee1de926d55275d2a5bb38ed16c5fd35350aebec4da273afcddc3ab552fbb77afcf8fd23755237f5ca8c2f6b70ca726dd678d632cd5570b9c96deebefa3a04deb373af5779c8635ae429cff54e3ea13349cebef7fb712fbfcdeff2697e5fec19ae1d523ecb1ff279fef8bd9af219f75a3772310ef345fe942ff3951ee5cf1c0bd6480dcc0beddd7d5dd5afaf7a14cfc4d4b351ea483fa823fa7720b2fc257f35e746e56bfafb66fbf9869fe79b2ee45bdf7f96f439cf198aa75b2616cf77e9d3774e28ff9be7587a593d279bea21d93b2b9e9efd5eebcffc3d83ccfccff8f3f7c6fdf5bffffd97ff01a64b29d7</data>
+    </image>
+    <image name="image2">
+        <data format="PNG" length="256">89504e470d0a1a0a0000000d4948445200000016000000160806000000c4b46c3b000000c749444154388dad55db1184200c4c180bb81a28c73aad811228c356f42b3792db3cc0db2fc724bb7901dc7b270f27ed17fa5fa9b117b7cd90211f4ba0ac906a7f1453b4d30ca917bb590681552af23f69bfc4ffa71519d2c8f62546ea5ea03738b1c18c33a4d156f0d13f43b61952e4af6d6e8fb3a408f080448419a433d6486d85052fdba892a295f5d45785cd8c51a9d6de6a814a8d2131da51f98e7a3b64ec9da04a8db53d43be3c3c0b22cacf17e4cdb5a931649ceddf34b190cf0aa019f03f1fd3e7457f03b5a66c9ed26e86130000000049454e44ae426082</data>
+    </image>
+    <image name="image3">
+        <data format="PNG" length="1002">89504e470d0a1a0a0000000d4948445200000016000000160806000000c4b46c3b000003b149444154388dad945f4c5b551cc73fe7dc4b7b4bcba0762d45c43114323599ee6192609c51d883892ce083f1718b3ebb185f8dc91e972cf39d2d2a2f1af664b6f1e0fe3863a0718969700eb0c52142da0242a1bd6d696f7bcff101585203ceb8fd9ece39f99dcff9fe7edf939f88c562ec465f5f9fe609442c161362173c3e3eae7b7a7ac8e7f36432196cdbfe4f907c3e4f2291201e8fe338cec3737357e9e8e828aded1e229d650e1f2d51754b082110124c13a4dc5ea341eb9dc284c0558a853f3ce8cb0677ef500fde7d39d2596679e326597b8e9abb85d7a770ab16ab6983ec5a05b487a70e36f0f4e10afe408d6a558310980108478dba4a1e8233990c5d474b64ed39aa3a8fe5f3317fbf81dbd70bccfeb205947632fd74f6589c1c6ea2f70d03a58ba0c1f2c9bdc1b66de3b8256a6e11cbe7e3ee1d181b590124fe2693aeee08d223c82c3a2c24b7b874bec8f26288774f7bd054504aef0dde6e99c0eb83f9fb266323cb80a27fb0958141836044605a2ee5523393371cc646fee2da37195aa35d0c0c5b4859ac03d7e91712dcaac5adab3650a3ff9d08ef7dd8404bb48869e5d958b5b87dadc4c9a1464e9f0d0326df7ebd86bd2e310cb1bf62d384d59441f2d70a070e1c60e09489929b988681bdd9cc97170bcc4c65595f71f8e0e3301337fc24a7732467831875a47f289652b0be5e4151e6d07316c1b0c0340d8ab92023e76d66a6b2840e36d2fb7a13fee632475e6edc367ea98a90fb98b7dd6310ca0328a44761582e1bab41befabcc0ec940d28bc5e93b68e064cab84e1d9beaeb48934eac1f53b01c1b000fca496aa54b61a99fcde61662a4b4b4b23d1680be9d426173e4df3602a48ea411989a4fd590f52a8fd156b05ed9d350e3defe3cfdf4b4c7ce770ea7d3fb9f520afbe1620daeee5c26735d20b9b9cfb6811a754a439e4e5c5639a4caa1e5caf586bfc0197b78702005cb9b4cae4cd3267ce8638fe964bd72b393e39d74928d242617303a756a37f284447770dcdbffc6384a05a85de1306e9a52057c7527c7131c3c42d3f475eb2303c82d4fc3276d6811db37efeb148723082d9b08f79f97c1e5729109a9a28307cc622d2d6cdf52b2b24efe548dedb00142009862cfa879ee1a71f6cec928353511472fbf4389148b0b0e0c108081412458dfe21c9f11351e67e7358595468246d1d1e5e38a6e9e851bc39d84ab502a669331dafec0d8ec7e3e8cb06e1a881d727d1ae40180a434a8c9db129a54126ad48a7358c2b4c5352c8c374bcccdab2bb37d8719cba79fab8211f9df218e0582c261e95f8bfc04f1a1e8bc5c4dfe0a190172af6a9690000000049454e44ae426082</data>
+    </image>
+</images>
+<connections>
+    <connection>
+        <sender>ProfParmspushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>lprofMainBase</receiver>
+        <slot>ProfileParmsbutton()</slot>
+    </connection>
+    <connection>
+        <sender>ProfIDpushButton</sender>
+        <signal>released()</signal>
+        <receiver>lprofMainBase</receiver>
+        <slot>ProfIDpushButton_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>ProfCheckpushButton</sender>
+        <signal>clicked()</signal>
+        <receiver>lprofMainBase</receiver>
+        <slot>ProfChecker_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>TheGoButton</sender>
+        <signal>clicked()</signal>
+        <receiver>lprofMainBase</receiver>
+        <slot>Go_button_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>LoadBtn</sender>
+        <signal>clicked()</signal>
+        <receiver>lprofMainBase</receiver>
+        <slot>slotLoad()</slot>
+    </connection>
+    <connection>
+        <sender>OutputFileSelBtn</sender>
+        <signal>clicked()</signal>
+        <receiver>lprofMainBase</receiver>
+        <slot>slotSelectOutputFile()</slot>
+    </connection>
+    <connection>
+        <sender>TabProfiler</sender>
+        <signal>currentChanged(QWidget*)</signal>
+        <receiver>lprofMainBase</receiver>
+        <slot>slotChangeStrategy()</slot>
+    </connection>
+    <connection>
+        <sender>ProofToggle</sender>
+        <signal>clicked()</signal>
+        <receiver>lprofMainBase</receiver>
+        <slot>slotProof()</slot>
+    </connection>
+    <connection>
+        <sender>TabProfiler</sender>
+        <signal>currentChanged(QWidget*)</signal>
+        <receiver>lprofMainBase</receiver>
+        <slot>slotIsAllReady()</slot>
+    </connection>
+    <connection>
+        <sender>Reference_install</sender>
+        <signal>clicked()</signal>
+        <receiver>lprofMainBase</receiver>
+        <slot>slotInstallReference()</slot>
+    </connection>
+    <connection>
+        <sender>TargetSelector</sender>
+        <signal>valueChanged()</signal>
+        <receiver>lprofMainBase</receiver>
+        <slot>slotTargetRefChanged()</slot>
+    </connection>
+    <connection>
+        <sender>pushButtonHelp</sender>
+        <signal>clicked()</signal>
+        <receiver>lprofMainBase</receiver>
+        <slot>slotHelpButton()</slot>
+    </connection>
+    <connection>
+        <sender>pushButtonHelp_3</sender>
+        <signal>clicked()</signal>
+        <receiver>lprofMainBase</receiver>
+        <slot>slotHelpButton()</slot>
+    </connection>
+    <connection>
+        <sender>OutputFileEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>lprofMainBase</receiver>
+        <slot>OutputFileNameChanged()</slot>
+    </connection>
+    <connection>
+        <sender>TabProfiler</sender>
+        <signal>currentChanged(QWidget*)</signal>
+        <receiver>lprofMainBase</receiver>
+        <slot>tabChanged()</slot>
+    </connection>
+    <connection>
+        <sender>RadioAccurate</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>lprofMainBase</receiver>
+        <slot>slotChangeStrategy()</slot>
+    </connection>
+    <connection>
+        <sender>MeasureMonitorButton</sender>
+        <signal>clicked()</signal>
+        <receiver>lprofMainBase</receiver>
+        <slot>monitorvalues_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>pushButtonHelp_2</sender>
+        <signal>clicked()</signal>
+        <receiver>lprofMainBase</receiver>
+        <slot>slotHelpButton()</slot>
+    </connection>
+    <connection>
+        <sender>ProfCheckpushButton_2</sender>
+        <signal>clicked()</signal>
+        <receiver>lprofMainBase</receiver>
+        <slot>ProfChecker_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>TheGoButton_2</sender>
+        <signal>clicked()</signal>
+        <receiver>lprofMainBase</receiver>
+        <slot>Go_button_clicked()</slot>
+    </connection>
+    <connection>
+        <sender>OutputFileSelBtn_2</sender>
+        <signal>clicked()</signal>
+        <receiver>lprofMainBase</receiver>
+        <slot>slotSelectOutputFile()</slot>
+    </connection>
+    <connection>
+        <sender>OutputFileEdit_Mon</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>lprofMainBase</receiver>
+        <slot>OutputFileNameChangedMon()</slot>
+    </connection>
+    <connection>
+        <sender>RadioCoarse</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>lprofMainBase</receiver>
+        <slot>slotChangeStrategy()</slot>
+    </connection>
+</connections>
+<slots>
+    <slot>slotChangeStrategy()</slot>
+    <slot>ProfIDpushButton_clicked()</slot>
+    <slot>ProfileParmsbutton()</slot>
+    <slot>monitorvalues_clicked()</slot>
+    <slot>ProfChecker_clicked()</slot>
+    <slot>Go_button_clicked()</slot>
+    <slot>slotLoad()</slot>
+    <slot>slotPick()</slot>
+    <slot>slotSelectOutputFile()</slot>
+    <slot>slotIsAllReady()</slot>
+    <slot>slotProof()</slot>
+    <slot>slotInstallReference()</slot>
+    <slot>slotTargetRefChanged()</slot>
+    <slot>slotHelpButton()</slot>
+    <slot>OutputFileNameChanged()</slot>
+    <slot>OutputFileNameChangedMon()</slot>
+    <slot>tabChanged()</slot>
+</slots>
+<functions>
+    <function access="private" specifier="non virtual">init()</function>
+</functions>
+<layoutdefaults spacing="6" margin="11"/>
+<includehints>
+    <includehint>it8selector.h</includehint>
+    <includehint>it8fileselector.h</includehint>
+    <includehint>iccprofileselector.h</includehint>
+    <includehint>iccprofileselector.h</includehint>
+    <includehint>it8selector.h</includehint>
+</includehints>
+</UI>

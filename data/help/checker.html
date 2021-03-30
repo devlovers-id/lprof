@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="en-us"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  
+
+
+  <title>Profile Checker Dialog Help</title><style type="text/css"><!--
+fn { margin-left: 1cm; text-indent: -1cm; }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }
+body { background: #ffffff; color: black; }
+--></style>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="Generator" content="Kate, the KDE Advanced Text Editor"></head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+<tbody><tr bgcolor="#e5e5e5">
+<td valign="center">
+<a href="lprof-help.html">
+<font color="#004faf">Home</font></a>
+| <a href="monitor.html">
+<font color="#004faf">Monitor&nbsp;Tab</font></a>
+| <a href="preferences.html">
+<font color="#004faf">Preferences&nbsp;Tab</font></a>
+| <a href="checker.html">Profile Checker</a> | <a href="profile-id.html">
+<font color="#004faf">Profile Identification</font></a>
+| <a href="profile-parms.html">
+<font color="#004faf">Profile Parameters</font></a>
+| <a href="mon-val.html">
+<font color="#004faf">Monitor Values Dialog</font></a>
+| <a href="gamma.html">
+<font color="#004faf">Set Gamma Dialog</font></a>
+| <a href="inst-ref.html">
+<font color="#004faf">Install Reference File Dialog</font></a>
+| <a href="ufraw.html">
+<font color="#004faf">UFRAW Tutorial</font></a>
+</td>
+<td align="right" valign="center"><img src="lprof.png" align="right" border="0" height="32" width="64"></td></tr></tbody>
+</table>
+
+<h1 align="center"><small>Profile Checker Help Window</small></h1>
+
+<p><big>LPROF is an open source application that creates ICC profile for cameras, scanners and monitors. <br>
+</big></p>
+
+<h4 align="center"><big>Profile Checker</big><small></small></h4>
+
+<p><big>The profile checker is a tool for inspecting some of
+the profile internals. It allows users to inspect a number of different
+aspects of the profile.&nbsp; In most cases users will be checking the
+profiles accuracy.&nbsp; Feel free to experiment, the profile checker will
+never write to or modify your profile, so you can play with it in a safe way. </big></p>
+
+<p><big>When the Profile Checker button is selected on the main
+LPROF dialog information about the last profile created is passed to
+the Profile Checker dialog.&nbsp; The user can over ride these values
+to look at other profiles but in most cases the default data passed to
+the Profile Checker is exactly what is wants.&nbsp; To start the
+inspection process press "Inspect
+Profile" button.</big></p>
+
+<p><small></small></p>
+
+<h4 align="center"><big>Info Tab</big></h4>
+
+<p><big>The info tab contains basic information about the profile.&nbsp; This includes:</big></p>
+
+<p><big><br>
+&nbsp; &nbsp; 1. Identification information entered in the "<a href="profile-id.html">Profile Identification</a>" dialog.&nbsp; </big></p>
+
+<p><big>&nbsp;&nbsp;&nbsp; 2. The profile white point.</big></p>
+
+<p><big>&nbsp;&nbsp;&nbsp; 3. The profile media white point.</big></p>
+
+<p><big>&nbsp;&nbsp;&nbsp; 4. The profile primaries.</big></p>
+
+<p><big>&nbsp;&nbsp;&nbsp; 5. The profile red, green and blue gamma.</big></p>
+
+<p><big>&nbsp;&nbsp;&nbsp; 6. The target reference file file name.</big></p>
+
+<p><big>&nbsp;&nbsp;&nbsp; 7. The measurement sheet file name.</big></p>
+
+<small><br>
+</small>
+
+<h4 align="center"><big>CIE Diagram Tab</big></h4>
+
+
+
+<p><big>This tab contains a CIE or chromaticity diagram.&nbsp; A
+CIE diagram is a representation of all of the colors that a person with
+normal vision can see.&nbsp; This is represented by the colored sail
+shaped area.&nbsp; In addition you will see a triangle that is
+superimposed on the diagram outlined in white.&nbsp; This triangle
+represents that outer boundaries of the color space of the device that
+is characterized by the profile being inspected.&nbsp; This is called
+the device gamut.</big><br>
+<br>
+
+</p>
+
+<p><big>In addition there are black dots and yellow lines on the
+diagram.&nbsp; Each black dot represents one of the measurement points
+that was used to create this profile.&nbsp; The yellow line
+represents the amount that each point is corrected by the profile and
+the direction of the correction.</big></p>
+
+
+
+<small><br>
+</small>
+
+<h4 align="center"><big>dE Report Tab</big><small><br>
+
+</small></h4>
+
+
+
+
+
+<p><br>
+<big>dE is short for delta E which is a standard way to measure
+color errors.&nbsp; On the "dE report tab" you will see the error
+statistics. (unless you forgot to set the profile verbosity to "Verbose, store
+anything").&nbsp; This report shows how close the color will be
+once the profile is applied to the image.&nbsp; A delta E of 1.0 is
+right at the threshold of human perception.&nbsp; That is under perfect
+lighting conditions when comparing two color patches that are different
+by 1.0 delta E just over half of those looking that those patches side
+by side will correctly identify them as not being the exact same
+color.&nbsp;&nbsp; Think of it as the colormeteric equivalent of a
+decibel.&nbsp; It is fairly typical to get average delta E of around 1.0 for camera/scanner profiles created with LPROF.</big><br>
+</p>
+
+<h4 align="center"><big>Curves Tab<br>
+</big></h4>
+
+<p><big>The curves tab shows the correction curves applied to each
+color channel by the profile.&nbsp; When the device being profiled has
+good color balance the red, green and blue curves will lay on top of
+each other.&nbsp; But if the color balance of the device is off
+significantly the curves will separate from each other.&nbsp; Also as
+the gamma of the devices response changes the amount of curvature in
+these correction curves will change.</big></p>
+
+<small><br>
+</small>
+
+<pre><small></small></pre>
+
+
+
+<p align="center"><big>Copyright &copy; 1998-2005
+<a href="http://lprof.sourceforge.net/">LPROF</a>. All Rights Reserved.</big></p>
+
+<address></address>
+
+<hr>
+<div align="center">
+<table border="0" cellspacing="0" width="100%"><tbody><tr>
+<td>Copyright &copy; 2005
+<a href="http://lprof.sourceforge.net/">LPROF</a></td><td align="center"><a href="trademarks.html">Trademarks</a>
+</td><td align="right"><div align="right">LPROF 1.11</div>
+</td></tr></tbody></table></div>
+
+</body></html>

@@ -1,0 +1,95 @@
+#
+# spec file for package lprof (Version 1.11.2)
+#
+# Copyright (c) 2006 SUSE LINUX Products GmbH, Nuernberg, Germany.
+# This file and all modifications and additions to the pristine
+# package are under the same license as the package itself.
+#
+# Please submit bugfixes or comments via http://bugs.opensuse.org/
+#
+
+# norootforbuild
+# usedforbuild    Mesa Mesa-devel aaa_base acl attr audit-libs autoconf automake bash bind-libs bind-utils binutils bison bzip2 coreutils cpio cpp cracklib cvs cyrus-sasl db desktop-translations diffutils e2fsprogs expat file filesystem fillup findutils flex fontconfig fontconfig-devel freeglut freeglut-devel freetype2 freetype2-devel gawk gcc gcc-c++ gdbm gdbm-devel gettext gettext-devel glibc glibc-devel glibc-locale gpm grep groff gzip info insserv klogd less libacl libattr libcom_err libdrm libdrm-devel libgcc libjpeg libjpeg-devel liblcms liblcms-devel libmng libmng-devel libnscd libpng libpng-devel libstdc++ libstdc++-devel libtiff libtiff-devel libtool libxcrypt libzio m4 make man mktemp module-init-tools ncurses ncurses-devel net-tools netcfg openldap2-client openmotif-libs openssl pam pam-modules patch perl permissions popt procinfo procps psmisc pwdutils python qt3 qt3-devel qt3-devel-doc rcs readline rpm scons sed strace sysvinit tar tcpd texinfo timezone unzip update-desktop-files util-linux vigra vigra-devel vim xorg-x11-devel xorg-x11-libs zlib zlib-devel
+
+Name:           lprof
+BuildRequires:  libdrm-devel libtiff-devel qt3-devel-doc scons update-desktop-files vigra-devel
+Version:        1.11.2
+Release:        3
+URL:            http://lprof.sourceforge.net/
+Group:          Productivity/Graphics/Other
+License:        GPL
+Summary:        ICC Profiler
+Source:         %{name}-%{version}.tar.bz2
+Patch:          lprof-desktop.patch
+Patch1:         lprof-typo.patch
+Autoreqprov:    on
+BuildRoot:      %{_tmppath}/%{name}-%{version}-build
+
+%description
+LPROF is the only open source ICC profiler with a graphical user
+interface. It can be used to create profiles for cameras, scanners and
+monitors.  As such it fills a necessary niche in the emerging open
+source color management effort.
+
+
+
+Authors:
+--------
+    Hal Engel <hvengel@users.sourceforge.net>
+    Marti Maria <marti@littlecms.com>
+
+%debug_package
+%prep
+%setup
+%patch
+%patch1
+sed -i /includehint/d */*/*.ui
+(
+  find -name SConstruct
+  find -name SConscript
+  echo lprof.pro build_config.py PathOption.py
+  find -name Makefile
+) | while read ; do
+  sed -i "
+s:/lib:/%_lib:g
+s:\(os.path.join\|qtdir\)\(.*\)'lib':\1\2'%_lib':g
+s:src/%_lib:src/lib:g
+s:usr/%_lib/qt3:usr/lib/qt3:g
+s/%{_lib}lprof/liblprof/g
+s:%{_lib}qtlcmswidgets:libqtlcmswidgets:g
+" $REPLY
+done
+
+%build
+export QTDIR=/usr/lib/qt3
+scons %{?jobs:-j %jobs} PREFIX=/usr ccflags="$RPM_OPT_FLAGS" cxxflags="$RPM_OPT_FLAGS"
+
+%install
+rm -rf $RPM_BUILD_ROOT
+mkdir -p $RPM_BUILD_ROOT/usr/{bin,share/{applications,pixmaps}}
+PREFIX=$RPM_BUILD_ROOT/usr scons PREFIX=$RPM_BUILD_ROOT/usr install
+mv $RPM_BUILD_ROOT/usr/share/lprof/data/desktop/*.desktop $RPM_BUILD_ROOT/usr/share/applications/
+rmdir $RPM_BUILD_ROOT/usr/share/lprof/data/desktop
+( cd $RPM_BUILD_ROOT/usr/share/pixmaps ; ln -s ../lprof/data/icons/*.png . )
+%suse_update_desktop_file lprof
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr (-, root, root)
+%doc COPYING KNOWN_BUGS README sRGB_profile_License
+/usr/bin/*
+/usr/share/lprof
+/usr/share/applications/*.desktop
+/usr/share/pixmaps/*.png
+
+%changelog -n lprof
+* Wed Jan 25 2006 - mls@suse.de
+- converted neededforbuild to BuildRequires
+* Mon Jan 23 2006 - sbrabec@suse.cz
+- Updated to version 1.11.2.
+* Tue Jan 17 2006 - sbrabec@suse.cz
+- Updated to version 1.11.1.
+* Fri Nov 25 2005 - sbrabec@suse.cz
+- New SuSE package, version 1.11.0.

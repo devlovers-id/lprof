@@ -1,0 +1,355 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="en-us"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  
+
+
+  <title>LPROF Help</title><style type="text/css"><!--
+fn { margin-left: 1cm; text-indent: -1cm; }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }
+body { background: #ffffff; color: black; }
+--></style>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="Generator" content="Kate, the KDE Advanced Text Editor">
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="Generator" content="Kate, the KDE Advanced Text Editor">
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="Generator" content="Kate, the KDE Advanced Text Editor"></head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+<tbody><tr bgcolor="#e5e5e5">
+<td valign="center">
+<a href="lprof-help.html">
+<font color="#004faf">Home</font></a>
+| <a href="monitor.html">
+<font color="#004faf">Monitor&nbsp;Tab</font></a>
+| <a href="preferences.html">
+<font color="#004faf">Preferences&nbsp;Tab</font></a>
+      <big><big>| </big></big><a href="checker.html">Profile Checker</a> |<a href="profile-id.html"><big><big>
+      </big></big><font color="#004faf">Profile Identification</font></a>
+| <a href="profile-parms.html">
+<font color="#004faf">Profile Parameters</font></a>
+| <a href="mon-val.html">
+<font color="#004faf">Monitor Values Dialog</font></a>
+| <a href="gamma.html">
+<font color="#004faf">Set Gamma Dialog</font></a>
+| <a href="inst-ref.html">
+<font color="#004faf">Install Reference File Dialog</font></a>
+| <a href="ufraw.html">
+<font color="#004faf">UFRAW Tutorial</font></a>
+</td>
+<td align="right" valign="center"><img src="lprof.png" align="right" border="0" height="32" width="64"></td></tr></tbody>
+</table>
+
+<h1 align="center"><small><small><small></small></small>LPROF Main Help Window</small></h1>
+
+
+<p><big>LPROF is an open source application that creates ICC profile for cameras, scanners and monitors. </big><small><br>
+
+</small></p>
+
+<p align="center"><big><b>Building a scanner or camera profile</b></big></p>
+
+<div align="left"><small>
+</small><p><big>Camera
+and scanner profiles are built by using a thing known as an "IT8 target".
+IT8 targets are just a photo with a set of color patches. There are
+known colorimetric measurements for each of these patches. There is
+also a standard way to specify these measurements, the IT8/CGATS file
+format.&nbsp; Each&nbsp; IT8 target comes with a IT8/CGATS file
+that contains the colormetric measurements for that target.<br>
+</big></p><small>
+</small><p><big>IT8/CGATS is a way to encode data that is both, human and
+machine readable. You can open any IT8/CGATS reference file
+with a text editor. You can even modify the
+contents. Since it is a standard, most color management systems
+will accept it including LPROF.&nbsp;&nbsp;
+A IT8/CGATS reference file contains measurements for a set of color patches.
+The measurement of each patch can be the device colorant values
+(the RGB or CMYK values in the 0..255 range) or the tristimulous values (XYZ
+or Lab) and some statistical data. <br>
+</big></p><small>
+</small><p><small></small></p><small>
+</small><p><big>A IT8/CGATS reference file looks like this: <br>
+</big></p><small>
+</small><p><big>----------------------------------------------------------- <br>
+</big></p><small>
+</small><p><big>IT8.7/2
+ORIGINATOR "Wolf Faust" <br>
+</big></p><small>
+</small><p><big>DESCRIPTOR "L* a* b* Batch average data (light D50, viewing angle 2)" <br>
+</big></p><small>
+</small><p><big>MANUFACTURER "Wolf Faust - http://www.coloraid.de" <br>
+</big></p><small>
+</small><p><big>CREATED "January 07, 2002"
+PROD_DATE "2001:12" <br>
+</big></p><small>
+</small><p><big>SERIAL "DIN A4 R012020" <br>
+</big></p><small>
+</small><p><big>MATERIAL "Kodak Professional Digital 3 - Non-Glossy" <br>
+</big></p><small>
+</small><p><big>NUMBER_OF_FIELDS 9 <br>
+</big></p><small>
+</small><p><big>BEGIN_DATA_FORMAT <br>
+</big></p><small>
+</small><p><big>SAMPLE_ID XYZ_X XYZ_Y XYZ_Z LAB_L LAB_A LAB_B LAB_C LAB_H <br>
+</big></p><small>
+</small><p><big>END_DATA_FORMAT <br>
+</big></p><small>
+</small><p><big>NUMBER_OF_SETS 288 <br>
+</big></p><small>
+</small><p><big>BEGIN_DATA <br>
+</big></p><small>
+</small><p><big>A1 3.25 2.71 1.94 18.86 11.18 2.87 11.55 14.41 <br>
+</big></p><small>
+</small><p><big>A2 4.07 2.73 1.60 18.91 23.59 6.54 24.49 15.48 <br>
+</big></p><small>
+</small><p><big>A3 5.79 3.42 1.75 21.67 33.38 9.60 34.73 16.05 <br>
+</big></p><small>
+</small><p><big>A4 4.28 2.66 1.46 18.62 27.73 7.59 28.75 15.32 <br>
+</big></p><small>
+</small><p><big>A5 11.97 10.30 7.42 38.38 15.04 4.16 15.61 15.47 <br>
+</big></p><small>
+</small><p><big>.... etc ... <br>
+</big></p><small>
+</small><p><small></small></p><small>
+</small><p><big>------------------------------------------------------------ <br>
+</big></p><small>
+</small><p><big>The target manufacturer provides a IT8/CGATS file containing these
+measurements for the target. So, the target along with the targets IT8/CGATS reference file is gives us a set
+of KNOWN (calibrated) colors. We must then, tell the profiler which RGB
+values our scanner or camera returns for each of these patches.
+</big></p><small>
+</small></div>
+
+
+
+<p><big>LPROF
+can grab the RGB values of each color patch on an IT8.7
+target image. In order to generate a profile, we need the RGB and Lab values
+for each patch. Let's outline the scanner/camera profiling
+procedure.&nbsp; First we will detail how this is done with a
+scanner and then we will detail what is different when profiling a
+camera.<br>
+</big></p>
+
+<small><br>
+</small>
+
+<h4 align="center"><big>Step 1: Adjust controls of scanner. <br>
+</big></h4>
+
+<p><big>First you should be aware that getting a good capture of the IT8.7 image is 80% to 90% of getting a good profile.<br>
+</big></p>
+
+<p><big>Bit depth:&nbsp; You will need 24 bits (8 bits per color) per
+pixel at the very least but using 48 bit (16 bits per color) images is
+best.&nbsp; <br>
+</big></p>
+
+<p><big>Gamma:
+On most scanners you can select the gamma to be used for scanning the
+image.&nbsp; In general you should use a gamma between 2.2 and 3.0.
+A Gamma 2.2 has the additional benefit of being close to the sRGB
+gamma, and this means the uncorrected Image will "look nice" on an
+"average" monitor. It is also near to perceptual gamma. Gamma 2.4 has
+the additional benefit of being closest to perceptual space, and this
+is a very good reason to use this value. Less that 2.2 (and of course
+the infamous 1.0) can generate a significant loss of detail in shadows while only to
+giving a slight improvement of highlight detail. Don't use this unless your are
+using 16 bits per sample, and even then, don't do it unless you
+know what are you doing! Gammas around 2.4 are best for flat bed
+scanners and film scanners with limited dynamic range.&nbsp; With
+high dynamic range film scanners values closer to 3.0 may be
+best.&nbsp; Don Hutchson of Hutch Color, for example, recommends a gamma of 2.8 for
+high dynamic range scanners.&nbsp; But for flat bed scanners more
+than 2.4 (up to 3.0) looses some highlight detail with no gains in
+shadow detail. <br>
+</big></p>
+
+<p><big><br>
+Turn off all color management, color enhancing and tweaking in scanner
+driver. Set brightness, contrast and hue (if available) to default
+values.&nbsp; Make sure that all controls are locked down and that
+the scanner software is not doing any automatic adjustments. These
+setting are supposed be your working scanning mode, so set all of them
+to reasonable defaults. <br>
+</big></p>
+
+<p><big>IMPORTANT: The profile will only be valid with the settings used to capture the IT8.7 target! <br>
+</big></p>
+
+<p><small></small></p>
+
+<h4 align="center"><big>Step 2: Scan the IT8 target. <br>
+</big></h4>
+
+<p><big>Store the IT8.7 image using one of the supported formates listed below depending on the formats
+supported by
+your platform and/or scanning software. LPROF supports the following formats for IT8.7 images:</big></p><ul><li>"BMP" - Microsoft Windows bitmap image file.</li><li>"GIF" - CompuServe graphics interchange format; 8-bit color. </li><li>"JPEG" - Joint Photographic Experts Group JFIF format; compressed 24-bit color (only available if libjpeg is installed). </li><li>"PNG" - Portable Network Graphic (only available if libpng is installed). </li><li>"PBM" - Portable bitmap format (black and white). </li><li>"PGM" - Portable graymap format (gray scale). </li><li>"PNM" - Portable anymap. </li><li>"PPM" - Portable pixmap format (color). </li><li>"SUN" - SUN Rasterfile. </li><li>"TIFF" - Tagged Image File Format. (only available if libtiff is installed.) </li><li>"VIFF" - Khoros Visualization image file.</li></ul><p><big>With
+8, 16 or 32 bit integers or 32 or 64 bit floating point values per
+color channel if these higher bit depths are support by the image file
+format.</big></p><p><big> DON'T use JPEG! It&nbsp;
+is unsuitable for this purpose because of the loss of information that
+results when the data is compressed. You could use JPEG on final
+images,
+but not in the profiling process. <br>
+</big></p>
+
+<p><small></small></p>
+
+<h4 align="center"><big>Step 3: Extract the RGB values for each patch. <br>
+</big></h4>
+
+<p><big>Without help, this could be a huge task. There are over 250
+patches in a typical IT8.7 target (some have as many as 288) and taking each sample by hand would be tedious at best. With
+the help of the LPROF this is an easy task.
+</big><big>Before we can proceed the reference file for the target must be installed so that LPROF can find it.&nbsp; Please see <a href="inst-ref.html">Install Reference File Dialog</a> for details.</big><big>&nbsp; Start LPROF and on the Camera/Scanner
+Profiler tab press the "Load Image" button. Select the image of target you scanned in step 2.&nbsp; <br>
+</big></p>
+
+<p><big>I
+will use the scandmo.png image located in the "data/pics" directory as
+a sample. This is a Kodak film target, scanned with a scanner that adds
+a huge magenta cast. Don't worry, the profile will turn this one into a
+nice looking image and the magenta cast will help demonstrate how
+effective profiles generated with LPROF are. The reference file for
+this IT8.7 target
+(e3199608.TXT) is also located in the "data/pics" directory.&nbsp;
+Since this is a Kodak target in the <a href="inst-ref.html">Install Reference File Dialog</a> select the </big><big>"IT8.7 19+3 (Kodak) column picker"</big><big>
+template when installing the reference file.&nbsp;&nbsp; To "measure"
+the RGB values of the target image you use
+the mouse to place the pick template over the patches. You can do
+this by clicking on each corner of the of the target
+image.&nbsp;&nbsp; As each corner is selected with the mouse
+you will see a mark placed on the corner.&nbsp; If you do not see this
+mark then either you have not correctly installed the reference file or
+you have not selected the correct reference file.<br>
+</big></p>
+
+<p align="center"><big><img alt="Image for IT8.7 target corner" src="corner.jpg" height="184" width="218"><br>
+</big></p>
+
+<p><small></small></p>
+
+<p><big>When
+all four corners are marked the picker template will appear
+superimposed on the target image.&nbsp; Assure that all green
+rectangles
+are inside the patches. Failure to do so will result in a wrong
+profile! You can adjust the locations of the corner marks to fine tune
+the location of the picker template. &nbsp;On some images you might
+need to make some fairly large adjustments in the locations of the
+corner marks to get the template to line up.&nbsp; You can also adjust
+the
+relative size of "hot areas" by setting the % in "safe frame" on
+"Preferences" tab. A smaller safe value results in a larger "hot"
+zone.&nbsp; Normally there is no need to touch anything other than
+perhaps making&nbsp;adjustments to the placement of the corner marks.
+Once
+you were happy with the location of the patch grabber "hot" zones you
+now
+have the correct reference sheet of the target, which were given by
+Kodak in the targets reference file, and the RGB values obtained by the
+scanner. Now we can compare
+these to create a profile. <br>
+</big></p>
+
+<h4 align="center"><big>&nbsp;Step 4: Create the Profile:</big></h4>
+
+<p><big>From
+this point on it is quite easy.&nbsp; First specify the
+profile filename. Press the "..." button placed on the right of "output
+profile file", to select the location where the profile will be
+saved.&nbsp; On Linux/Unix systems this will default to
+$HOME/.color/icc.&nbsp; On Windows systems this will default to the Windows
+profile directory (on most systems
+c:\WINDOWS\SYSTEM32\spool\drivers\color).&nbsp; But you can override this. The
+file name for the new profile could be "scandmo.icm". You can now fill
+in some information to help locate the profile latter. Press the "<a href="profile-id.html">Profile Identification</a>" button to being up the <a href="profile-id.html">Profile Identification Dialog</a>, and fill in the fields.
+&nbsp; You are now ready to generate the profile. Press the "Create Profile" button to
+launch the profile creation process. After a few seconds, you will have
+a&nbsp;profile for your scanner.&nbsp;</big></p><p><big><br>You can inspect the profile in some detail by pressing the <a href="checker.html">Profile Checker button</a>.&nbsp;
+If you do you will see the the demo profile has the an average dE (delta E - amount of
+error) that is
+about 1.03 and a peak dE of about 4.0, which is very reasonable.&nbsp; Now, we can reduce the error
+level, but it will take a little more time to generate the profile. To do this press the "<a href="profile-parms.html">Parameters Parameters</a>"
+button, and select </big><big>"33 - huge" </big><big>from
+the&nbsp; "Resolution (CLUT points)" radio button group.&nbsp; Also in
+the Profile verbosity group select the "Verbose, store anything" radio
+button. &nbsp; Press the "OK" button
+to close the "<a href="profile-parms.html">Profile Parameters and Tweaks</a>"
+dialog and save these settings.&nbsp; Next select the "Create Profile"
+button. Now the
+profile generation
+process will take slightly longer, but the obtained profile is improved
+with an average dE is about 0.8 and the peak value is about 3.6.&nbsp;&nbsp;</big></p><p><big><br>Again you can use the&nbsp; "<a href="checker.html">Profile Checker</a>"
+to inspect your profile.&nbsp; In the Profile Checker have a look at
+the Shaper TRC curve in the curves tab.&nbsp; Notice that the green
+curve is significantly different from the red and blue curves.&nbsp;
+Since green is the complement of magenta this is exactly what you would
+expect for a device that was producing images with a magenta cast.&nbsp;</big></p><p><big><br>
+</big></p>
+
+<h4 align="center"><big>Step 5: Proofing the Profile.</big></h4>
+
+<p><big><br>
+Let's check how this profile affects the original Image. In the "<a href="preferences.html">Preferences</a>"
+tab set the&nbsp; "input profile" to the newly created scanner
+profile, and "monitor profile" should be set to either a custom profile
+that was created using the monitor profiler (see next section) or a generic profile such
+as sRGB. In the "<a href="preferences.html">Preferences</a>" tab check the "color manage display" check box and then go to the "Camera/Scanner Profile" tab to
+see the results. The girl's Image is dark, this is normal.
+However, the rest of patches are hugely modified, the gray scale
+should appear smooth and without any cast, as well as the overall magenta tint should disappear.</big></p>
+<p><small></small></p>
+<h4 align="center"><big>Special Considerations for Wide Gamut Devices Such as Cameras<br>
+</big></h4>
+<small><br>
+</small>
+<big>Some devices such as cameras can have a very wide gamut and
+therefore it is harder to get good profiles for these devices.&nbsp;
+This is particularly true for digital cameras with larger sensor sites
+(DSLRs) that produce raw files since the raw software can pull out much
+more information from the sensor data then is typical for in camera
+processing.&nbsp; <br>
+<br>
+The basic problem is that the gamut of the camera is significantly
+wider than the gamut of the color patches in the IT8.7 chart and the
+profiling software can over compensate in the areas near the edges of
+the gamut were that are no target patches to help guide the profiling
+software.&nbsp; This is known as a local reversal and results in some
+images exhibiting odd color shifts in some parts of the
+photograph.&nbsp; This will tend to happen with high contrast photos
+and will typically show up in darker highly saturated colors.&nbsp; <br>
+<br>
+This characteristic will normally only happen with profiles created using the local convergence extrapolation parameter (see <a href="profile-parms.html">Profile Parameters</a>).&nbsp;
+If you experience this with your profiles on high contrast high
+saturation images generate a new profile with local convergence
+extrapolation turned off (the default setting).</big><small>
+
+</small><br>
+
+
+
+<p align="center"><big>Copyright &copy; 1998-2005
+<a href="http://lprof.sourceforge.net/">LPROF</a>. All Rights Reserved.</big></p>
+
+<address></address>
+
+<hr>
+<div align="center">
+<table border="0" cellspacing="0" width="100%"><tbody><tr>
+<td>Copyright &copy; 2005
+<a href="http://lprof.sourceforge.net/">LPROF</a></td><td align="center"><a href="trademarks.html">Trademarks</a>
+</td><td align="right"><div align="right">LPROF 1.11</div>
+</td></tr></tbody></table></div>
+
+</body></html>

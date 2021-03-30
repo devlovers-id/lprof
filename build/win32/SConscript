@@ -1,0 +1,27 @@
+# import these variables from the parent build script
+from build_config import *
+
+Import('env', 'sources', 'moc_sources0', 'moc_sources1', 'moc_sources2', 'moc_sources3', 'moc_sources4', 'moc_sources5', 'moc_sources6', 'moc_sources7', 'idir_bin', 'idir_lib', 'idir_prefix')
+
+env.Tool('')
+
+# overides for Windows
+idir_bin    = os.path.join(idir_prefix, 'lprof', 'bin')
+idir_data   = os.path.join(idir_prefix , 'lprof', 'share', 'lprof')
+
+#liblprof=env.Library('lprof', liblprof_sources)
+#print liblprof_sources
+
+icc2it8=env.Program(target='icc2it8', source=ICCtoIT8_sources)
+env.Install(idir_bin, icc2it8)
+env.Alias('install', idir_prefix)
+
+# add the lprof target to the environment
+lprof=env.Program(target='lprof', source=sources + moc_sources0 + moc_sources1 + moc_sources2 + moc_sources3 + moc_sources4 + moc_sources5 + moc_sources6 + moc_sources7)
+
+env.Install(idir_bin, lprof)
+env.Alias('install', idir_prefix)
+
+env.Clean('icc2it8', [os.path.normpath('../../build/win32/ICCtoIT8')])
+
+env.Clean('lprof', [os.path.normpath('../../build/win32/checkerqt'), os.path.normpath('../../build/win32/gammaqt'), os.path.normpath('../../build/win32/IDqt'), os.path.normpath('../../build/win32/liblprof'), os.path.normpath('../../build/win32/libqtlcmswidgets'), os.path.normpath('../../build/win32/lprofqt'), os.path.normpath('../../build/win32/monqt'), os.path.normpath('../../build/win32/parmsqt'), os.path.normpath('../../build/win32/reference_inst_qt')])

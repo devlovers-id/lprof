@@ -1,0 +1,6 @@
+# $Id: SConscript,v 1.2 2006/02/19 23:59:12 hvengel Exp $
+Import('env');
+env.StaticLibrary('numlib', [ 'dhsx.c', 'dnsq.c', 'ludecomp.c', 'numsup.c',
+			      'powell.c', 'rand.c', 'sobol.c', 'svd.c',
+			      'zbrent.c' ])
+

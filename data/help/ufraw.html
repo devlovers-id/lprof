@@ -1,0 +1,275 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="en-us"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  
+
+
+  <title>Gamma Dialog Help</title><style type="text/css"><!--
+fn { margin-left: 1cm; text-indent: -1cm; }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }
+body { background: #ffffff; color: black; }
+--></style></head>
+<body>
+<pre></pre>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+<tbody><tr bgcolor="#e5e5e5">
+<td valign="center">
+<a href="lprof-help.html">
+<font color="#004faf">Home</font></a>
+| <a href="monitor.html">
+<font color="#004faf">Monitor&nbsp;Tab</font></a>
+| <a href="preferences.html">
+<font color="#004faf">Preferences&nbsp;Tab</font></a>
+| <a href="checker.html">Profile Checker</a> | <a href="profile-id.html">
+<font color="#004faf">Profile Identification</font></a>
+| <a href="profile-parms.html">
+<font color="#004faf">Profile Parameters</font></a>
+| <a href="mon-val.html">
+<font color="#004faf">Monitor Values Dialog</font></a>
+| <a href="gamma.html">
+<font color="#004faf">Set Gamma Dialog</font></a>
+| <a href="inst-ref.html">
+<font color="#004faf">Install Reference File Dialog</font></a>
+| <a href="ufraw.html">
+<font color="#004faf">UFRAW Tutorial</font></a>
+</td>
+<td align="right" valign="center"><img src="lprof.png" align="right" border="0" height="32" width="64"></td></tr></tbody>
+</table>
+
+<h1 align="center"><small>UFRAW Tutorial<br>
+
+</small></h1>
+
+<p><big>LPROF is an open source application that creates ICC profiles for cameras, scanners and monitors. <br>
+</big></p>
+
+<p><small></small></p>
+
+<h4 align="center"><big>Photographing the IT8.7 Target<br>
+</big></h4>
+
+<p><big>Capturing the target correctly is critical to producing a
+good profile and is perhaps as large of a factor as 80% to 90% in
+determining how good your profile will be. We will start out with how
+to create a general purpose camera profile. That is a profile that can be used for most
+images where the light has a smooth spectrum (direct and shaded sun
+light, cloudy, flash and tungsten light but not florescent light) and the
+white balance of the actual scene is close to what was set on the
+camera or selected/set in UFRAW.&nbsp; </big></p>
+
+<p><big>Here are some tips for getting a good IT8.7/2 image:</big></p>
+
+<ul type="circle"><small>
+
+  </small><li><p align="left"><big>Use a tripod.<br>
+</big></p><small>
+    </small></li><small>
+  </small><li><p align="left"><big>Use an IT8.7/2 target that has a matte or
+non-glossy surface. This will reduce reflections on the surface of
+the target and make it easier to get a good profile.&nbsp; You can get good results using a glossy target but it requires a
+great deal of care to prevent reflections from affecting the image. T</big><big>he
+<a href="http://www.targets.coloraid.de/">Wolf Faust</a> "C1"
+target which is an A4 size matte target is highly
+recommended.&nbsp;&nbsp; This target is a larger size which
+allows you to set up the camera farther away from the target which
+helps prevent shadows and reflections from affecting the target.&nbsp;
+It
+also has a stiff backing that holds the target flat.&nbsp; <br>
+    </big></p></li><small>
+  </small><li><big>Use a longer lens as this will allow you to place the camera farther away from the target.<br>
+    </big></li><small>
+  </small><li><p align="left"><big>Place
+the target where the light is even and on a
+surface where it is possible to change it's position. I use a
+black music stand and some laundry pins to hold and position the
+target.&nbsp; Even lighting is extremely critical.&nbsp;
+Be sure to avoid reflections or shadows from near by objects.<br>
+    </big></p><small>
+    </small></li><small>
+  </small><li><p align="left"><big>Bracket
+your exposures to make sure that you get a
+good one. It is important that the target is not over or under
+exposed.&nbsp; I recommend bracketing by the smallest increments
+that your camera will allow.&nbsp; The correct exposure should be
+about 1/3 to 1/2 stop below where there are blown out patches. </big><small><br>
+
+    </small></p><small>
+    </small></li><small>
+  </small><li><p align="left"><big>For
+older versions of LPROF (1.10 and earlier) it was critical that the
+camera be setup in a way
+that is well centered and square to the target.&nbsp; In this
+release of LPROF the user interface for placing the picker template is
+much improved and this is no longer necessary.&nbsp; But for images
+that are poorly squared it may require making adjustments when placing
+the pick template in LPROF.&nbsp; So try to get the camera centered on and square to the target.<br>
+    </big></p></li><small>
+  </small><li><big>Lighting
+must also be of a type that does not exhibit spikes or dips in the color
+spectrum.&nbsp; Because of this florescent lighting is not suitable
+for creating a general purpose camera profile.&nbsp; Don Hutcheson of
+Hutch Color has written that,&nbsp; at least with some targets, sun
+light and digital camera combinations will exhibit
+significant amounts of metamerism (color shifts). Don recommends
+shooting the target using tungsten lighting to minimize
+metamerism.&nbsp; I have found that with the Wolf Faust target and my
+camera (a Nikon D70) that sun light works well.&nbsp; So you may have
+to try different things to find what works best for your camera/target combination.&nbsp; If you
+find that your target/camera
+combination will not work well in sun light you might try using tungsten
+light.</big><small> <br>
+    </small><small>
+  </small></li></ul>
+
+<h4 align="center"><big>Process the Target Through UFRAW</big></h4>
+
+<p align="left"><big>Open the raw file in UFRAW. Set all of the controls to
+the default settings as a starting point. White
+balance should be correctly set for the type
+of lighting you used when photographing the target. Direct sunlight,
+cloudy, shade or
+incandescent are all good. Do not use fluorescent lighting. There
+are way too many variables to get results suitable for general purpose
+usage.&nbsp; Start out with gamma set to 0.45 and linearity set to
+0.10.<br>
+</big></p>
+
+<p align="left"><big>In the corrections tab set exposure to 0.00 and
+saturation to 1.00.&nbsp; Do not use Black point
+compensation or a camera curve.&nbsp; </big><big>All of these are the default settings.</big></p>
+
+<p align="left"><small><img alt="UFRAW 2" src="ufraw-2.jpg" height="679" width="1100"></small></p>
+
+<p align="left"><big>Then click in the patch in the lower left corner (the lightest gray
+patch) to display the spot RGB values and increase/decrease exposure until the spot value readings are between
+210 and 230. But make sure that no readings anywhere on the target are above 245 to 250. The
+patches at A13-19 can be brighter than the lightest gray patch so check
+these very carefully for any spot values that may be over 245 to 250. This
+controls how bright your images will be when using the profile created using this target. If
+your images are too bright then make the target brighter and vis versa.
+But these setting should get you in the ball park.</big><small>&nbsp;&nbsp; </small><big>Also
+remember that is it critical that no spot values anywhere on the target
+are 255 so this limits how much exposure compensation you can use to
+darken your images with the profile.</big><small><br>
+
+</small></p>
+
+<p align="left"><small><img alt="ufraw 1" src="ufraw-1.jpg" height="679" width="1100"></small></p>
+
+<big>Now click on the DMAX patch (lowest patch on the right) and
+check it's spot values.&nbsp; This should have RGB values between 10
+and 20 and it's spot values should be clearly different from the
+patch(s) next to it.&nbsp; If the spot values of the DMAX patch are
+close to zero then decrease the setting of the linearity slider.&nbsp;
+If the DMAX patch has spot values much higher than 20 increase the
+setting of the linearity slider.&nbsp; Go easy this should be some
+where between 0.05 and 0.15 in most cases.&nbsp; If the spot values of
+the DMAX patch and the patch(s) next to it are not different then
+either your camera does not have enough dynamic range to capture these
+darker colors or the image was under exposed.<br>
+<br>
+You can also check how even your lighting was by checking the spot
+values around the gray borders of the target image.&nbsp; These should
+not vary much as you check different locations on the image.<br>
+<br>
+Set both the Input Profile and the Output Profile to sRGB and Intent to
+Absolute colormetric.&nbsp; This will prevent UFRAW from doing any
+color transformations in the process of creating the image from the raw
+photograph of the target.&nbsp; This is exactly what you want for
+processing a target image to be used for creating profiles.<br>
+<br>
+Now click the Save As button to save the target image as a 16 bit TIFF
+file.&nbsp; Do not save it as a JPEG image as this will result in poor
+quality profiles.<br>
+<br>
+<img alt="ufraw 3" src="ufraw-3.jpg" height="510" width="550"></big>
+<p align="left"><small></small></p>
+
+<h4 align="center"><big>Create the Profile</big></h4>
+
+<p align="left"><big>Now you have the target image that will be processed by LPROF to make a profile for your camera.&nbsp; Please see <a href="lprof-help.html">Camera and Scanner Profiler Tab</a> for details on how to create the profile. </big></p>
+
+<p align="left"><small></small></p>
+
+<h4 align="center"><big>Using the Profile</big></h4>
+
+<small><br>
+</small>
+
+<big>To use this profile in UFRAW you will need to open a RAW file and
+select this new profile as the input profile. UFRAW will initially set
+gamma to 1.0 and linearity to 0. Reset these to 0.45 and 0.10 (or
+to exactly what you used when converting the raw image of the target) and
+adjust exposure to 0.0. For your output profile select a working space
+profile such as AdobeRGB or even better a profile with a larger gamut
+such as BetaRGB, PhotoGamutRGB or ProPhotoRGB. Stay away from sRGB as
+this has way too small of a color space to preserve all of the gamut that most digital
+cameras can capture. Set white balance to Camera (assumes you set the
+correct white balance when shooting the image) or select the correct white balance setting
+for the lighting you used to shoot the image.<br>
+<br>
+</big>
+<h4 align="center"><big>Making Profiles for Specific Lighting Conditions</big></h4>
+
+<small><br>
+</small>
+
+<big>Making color profiles for specific lighting conditions is a variation
+of the above. The hardest cases and the ones with the biggest payoff
+involve florescent lighting. There are a number of problems that you
+must deal with to get good profiles for this type of light. &nbsp;<br>
+&nbsp;<br>
+First
+different lights can vary significantly in color temperature. In fact
+the color temperatures for florescent lights range from around 2700K
+(very&nbsp; common) to around 9300K (not common). Therefore the
+florescent white balance setting(s) on most cameras are all but useless. Secondly florescent
+lights that are not high CRI (Color Reproduction Index) lights (almost all of them) will have
+very large spikes in the color spectrum. Where these spikes are located
+and how large they are varies depending on the manufacturer, the model
+of the light and possibly other factors such as age and room temperature.&nbsp;<br>
+&nbsp;<br>
+My
+experience is that I need to go through a
+2 stage process when shooting the target. First create a custom white
+balance setting before shooting the target so that the white balance
+that was
+used in the right ball park and also so that this white balance information
+is part of the
+data in the raw image file. For this I carry and use a gray card.&nbsp;
+See the documentation for your camera for details on setting it's white
+balance. Then shoot the target being careful to get even lighting. When
+running
+the target through the raw converter be very careful to make sure
+that you use the same white balance setting as the target was shot with
+ie. the custom white balance you set at the shoot. And of course
+everything else above about how to raw convert the target and how to
+create and use the profile applies.&nbsp;<br>
+&nbsp;<br>
+This should also work
+with other lighting conditions where the camera white balance presets
+are not correct and/or where the light has strange characteristics like
+spikes or drop outs in the spectrum.<br>
+<br>
+</big>
+<div align="center"><big>Copyright &copy; 1998-2005
+<a href="http://lprof.sourceforge.net/">LPROF</a>. All Rights Reserve</big><br>
+</div>
+
+<br>
+
+<br>
+
+<div align="center">
+<table border="0" cellspacing="0" width="100%"><tbody><tr>
+<td>copyright &copy; 2005
+<a href="http://lprof.sourceforge.net/">LPROF</a></td><td align="center"><a href="trademarks.html">Trademarks</a>
+</td><td align="right"><div align="right">LPROF 1.11</div>
+</td></tr></tbody></table></div>
+
+<br>
+
+</body></html>

@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="en-us"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  
+
+
+  <title>Preferences Tab Help</title><style type="text/css"><!--
+fn { margin-left: 1cm; text-indent: -1cm; }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }
+body { background: #ffffff; color: black; }
+--></style></head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+<tbody><tr bgcolor="#e5e5e5">
+<td valign="center">
+<a href="lprof-help.html">
+<font color="#004faf">Home</font></a>
+| <a href="monitor.html">
+<font color="#004faf">Monitor&nbsp;Tab</font></a>
+| <a href="preferences.html">
+<font color="#004faf">Preferences&nbsp;Tab</font></a>
+| <a href="checker.html">Profile Checker</a> | <a href="profile-id.html">
+<font color="#004faf">Profile Identification</font></a>
+| <a href="profile-parms.html">
+<font color="#004faf">Profile Parameters</font></a>
+| <a href="mon-val.html">
+<font color="#004faf">Monitor Values Dialog</font></a>
+| <a href="gamma.html">
+<font color="#004faf">Set Gamma Dialog</font></a>
+| <a href="inst-ref.html">
+<font color="#004faf">Install Reference File Dialog</font></a>
+| <a href="ufraw.html">
+<font color="#004faf">UFRAW Tutorial</font></a>
+</td>
+<td align="right" valign="center"><img src="lprof.png" align="right" border="0" height="32" width="64"></td></tr></tbody>
+</table>
+
+<h1 align="center"><small>Preferences Tab Help Window</small></h1>
+
+<p><big>LPROF is an open source application that creates ICC profiles for cameras, scanners and monitors. <br>
+</big></p>
+
+<h4 align="center"><big>Setting LPROF User Preferences</big></h4>
+
+
+
+
+
+<p><big>This dialog allows you to set various preferences for how LPROF will operate.</big></p>
+
+<h4 align="center"><big>Monitor Profile</big><br>
+</h4><small>
+</small>
+
+<big>Using this combo box you can select what monitor profile will
+be used by LPROF for proofing images and also to color manage the
+display in the Profile Checker dialog.&nbsp; Using the button labeled
+"..." you can select the directory that contains your monitor and other
+profiles.&nbsp; The combo box drop down will list all profiles in that
+directory that are tagged as display profiles.&nbsp; Note that it uses
+tag data from the profile and does NOT list the file names of the
+profiles.<br>
+</big>
+<h4 align="center"><big>Input Profile</big></h4>
+
+
+
+<p><big>To select the input profile that will be used for
+proofing&nbsp;use this part of the dialog.&nbsp; In most cases this
+will be used to check profiles you are creating for devices like
+cameras and scanners.&nbsp; It operates in the same way as the item
+above but does not limit itself to only display class profiles.</big></p>
+
+<h4 align="center"><big>Color Manage Display</big></h4>
+
+
+
+<p><big>This is used to turn soft-proofing on and off.&nbsp; To
+proof a scanner or camera profile select the profile for that device in
+the input profile item and check this item.&nbsp; When you go back to
+the <a href="lprof-help.html">Camera/Scanner Profiler</a> tab the target image will be color managed
+using a transform from the input profile to the monitor profile
+selected in this tab (see Monitor Profile above).</big><br>
+</p>
+
+<h4 align="center"><big><a href="inst-ref.html">Install Reference File</a></big></h4>
+
+
+
+<p><big>Press the button to open the "<a href="inst-ref.html">Install Reference File</a>" dialog.&nbsp; This dialog is used to install a reference file.</big></p>
+
+<h4 align="center"><big>Safe Frame</big></h4>
+
+
+
+<p><big>This is used to set the percentage of each color patch on
+the target will NOT be used by the picker template.&nbsp; The smaller
+this number is the larger the "hot" zones for each patch will be.&nbsp;
+A larger "hot" zone will sample a larger area from each patch but will
+also make it harder to prevent the "hot" zone from spilling over into a near
+by patch.&nbsp; The default values is 65% but values between 50% and
+75% can be used.&nbsp; In most cases the default value is best.</big></p>
+
+<h4 align="center"><big>Output Colorspace</big></h4>
+
+<p><big>This is used to control what kind of values will be output
+when an IT8.7 target is sampled.&nbsp; In most cases you will want to
+leave that set to the default value which is RGB - Pick from image.</big></p>
+
+<p align="center"><big>Copyright &copy; 1998-2005
+<a href="http://lprof.sourceforge.net/">LPROF</a>. All Rights Reserved.</big></p>
+
+<hr>
+<div align="center">
+<table border="0" cellspacing="0" width="100%"><tbody><tr>
+<td>Copyright &copy; 2005
+<a href="http://lprof.sourceforge.net/">LPROF</a></td><td align="center"><a href="trademarks.html">Trademarks</a>
+</td><td align="right"><div align="right">LPROF 1.11</div>
+</td></tr></tbody></table></div>
+
+</body></html>
